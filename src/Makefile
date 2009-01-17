@@ -11,6 +11,7 @@ all: $(htmlfiles)
 install:
 	cp -f *.html  ../build/
 	cp -f *.css   ../build/
+	cp -rf images ../build/
 
 clean:
 	rm $(htmlfiles) notesList.js
