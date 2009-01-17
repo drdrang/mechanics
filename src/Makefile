@@ -9,9 +9,9 @@ all: $(htmlfiles)
 	python buildPage.py $* > $@
 
 install:
-	cp -f *.html  ../build/
-	cp -f *.css   ../build/
-	cp -rf images ../build/
+	rsync -av *.html  ../build/
+	rsync -av *.css   ../build/
+	rsync -av  images ../build/
 
 clean:
 	rm $(htmlfiles)
