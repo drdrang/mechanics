@@ -14,4 +14,4 @@ install:
 	cp -rf images ../build/
 
 clean:
-	rm $(htmlfiles) notesList.js
+	rm $(htmlfiles)
