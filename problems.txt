@@ -1,0 +1,3843 @@
+AUTHOR: drang
+TITLE: Problem 1
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/25/2006 11:38:00 AM
+-----
+BODY:
+Let's start with some simplifications that we can almost always make in pulley problems like this:
+
+1. The tension in a string is always aligned with the string. This is because strings (ropes, cables, chains) are very flexible and cannot carry significant loads in any other direction.
+
+2. The tension in a string wrapped around a pulley is the same on both sides of the pulley. This is approximately true when the pulley is well lubricated and offers little resistance to turning. Sometimes pulleys in textbook problems are called "frictionless pulleys" to emphasize this.
+
+Therefore we can say at the outset that \\(F_1 = W_1\\) and \\(F_2 = W_2\\). Since the pulleys are at the same height and have "negligible" diameter (which means, in textbook-speak, that we are to assume the diameters are zero), we can draw a free-body diagram of Point A like this:
+
+<img src="/mechanics/images/001a.png" alt="" class="c">
+
+We're using \\(a\\) to represent the horizontal distance between Point A and Pulley 1, and therefore the horizontal distance between Point A and Pulley 2 is \\(2L-a\\). Equilibrium in the horizontal (x) direction requires
+
+\\[\sum F_x = W_2 \frac{2L-a}{\sqrt{(2L-a)^2 + h^2}} - W_1 \frac{a}{\sqrt{(2L-a)^2 + h^2}}= 0\\]
+
+where we've used the Pythagorean theorem to work out the horizontal components of the string tensions. Since \\(W_1 = W_2\\), it should be clear that \\(a = 2L-a\\) and therefore \\(a= L\\). You probably would have guessed that from the symmetry of the problem, but we've just proved it.
+
+To get the relation between \\(W_3/W_1\\) and \\(h/L\\), we use the equation of equilibrium in the vertical (y) direction:
+
+\\[\sum F_y = W_1 \frac{h}{\sqrt{L^2 + h^2}} + W_1 \frac{h}{\sqrt{L^2+h^2}} - W_3 = 0\\]
+
+where we've used \\(W_2 = W_1\\) and \\(a=L\\) to simplify the equation somewhat. A little algebra leads us to
+
+\\[\frac{W_3}{W_1} = \frac{2 h}{\sqrt{L^2+h^2}}\\]
+
+which is almost what the problem calls for. We need to divide the top and bottom of the right-hand-side of the equation by \\(L\\) to get it into this form
+
+\\[\frac{W_3}{W_1} = \frac{2 (h/L)}{\sqrt{1+(h/L)^2}}\\]
+
+which is the answer in the back of the book (except that I prefer to use an upper case \\(L\\) to avoid confusion with the numeral 1).
+
+Plotting the result is pretty simple if you have a spreadsheet or some math software. We'll substitute \\(w = W_3/W_1\\) for the weight ratio, and \\(m= h/L\\) for the slope of the string to make the equation smaller.
+
+\\[w = \frac{2m}{\sqrt{1 + m^2}}\\]
+
+Before we do any plotting, we should note that as \\(m\\) gets larger (that is, as the strings get closer to vertical), \\(w\\) gets closer to 2, a result that should make sense to you and should give you confidence in our solution (the back of the book is not always right!). It might also be nice to rearrange this equation to solve for the slope in terms of the weight ratio.
+
+\\[ m = \frac{w}{\sqrt{4 - w^2}} \\]
+
+Put this way, it becomes clear that the weight ratio cannot exceed 2. Physically, if the center weight were more than the sum of the other two weights, the system could not remain in equilibrium. The center weight would pull the other two up and over their pulleys.
+
+Here's the plot of the relationship.
+
+<img src="/mechanics/images/001b.png" alt="" class="c">
+
+The asymptote at \\(r=2\\) matches our physical understanding of the problem.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 2
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/25/2006 01:25:00 PM
+-----
+BODY:
+Here we have the same pulley system as in Problem 1, but with \\(W_1 = 3\\)lbs, \\(W_2 = 4\\)lbs, and \\(W_3 = 5\\)lbs. Although we could follow basically the same procedure as we did in Problem 1, but with \\(W_1 \not= W_2\\), the solution will get messy. Here, the best approach is to take advantage of the fact that there are only three forces acting at Point A and use what we know about triangles. (We could have used this same approach in Problem 1, but it wouldn't have saved us much effort.)
+
+Instead jumping right into the equations of equilibrium, we'll first assemble a *polygon of forces* by putting the component force vectors tip to tail. Equilibrium requires that the vectors, when drawn at the correct angles and with lengths equal to their magnitudes, form a closed polygon. In this case, the polygon is a triangle because there are only three forces.
+
+<img src="/mechanics/images/002a.png" alt="" class="c">
+
+I'm guessing that you've seen enough triangles in your life to recognize that this is a right triangle ( \\(3^2 + 4^2 = 5^2\\) ). If you haven't, learn to recognize it quickly; the 3-4-5 triangle is a favorite of teachers and textbooks because its side lengths are all integers. Multiples of the 3-4-5, like the 6-8-10 and the 4.5-6-7.5, are also favorites. Somewhat less popular, but still something you're likely to see, is the 5-12-13 triangle.
+
+Once we see that this is a 3-4-5 triangle, our problem is basically done. The angle at A between the two portions of the string is clearly 90°. The string itself is easily plotted using complementary angles in the construction below.
+
+<img src="/mechanics/images/002b.png" alt="" class="c">
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+COMMENT:
+AUTHOR: 
+EMAIL: 
+IP: 67.184.133.165
+URL: 
+DATE: 04/05/2006 10:22:13 PM
+just wondering if you would consider posting the solutions to the problems from Den Hartog's Mechanical Vibrations text
+-----
+COMMENT:
+AUTHOR: Dr. Drang
+EMAIL: drdrang@gmail.com
+IP: 69.47.190.124
+URL: http://www.leancrew.com/mechanics
+DATE: 04/06/2006 12:24:44 AM
+Anonymous,
+
+No plans for Vibrations. I have vague thoughts about doing his Strength of Materials book, but I've gotten so far behind on Mechanics...
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 3
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/25/2006 02:39:00 PM
+-----
+BODY:
+This one's a lot like Problem 2, except that instead of being given all the weights and figuring out the angles (or slopes), we're given a mixture of the weights and angles and will have to figure out the rest.
+
+The angle at A between the two parts of the string is still 90°, which is nice, because right triangles are easy to work with. The free-body-diagram and polygon of forces at A is shown below.
+
+<img src="/mechanics/images/003.png" alt="" class="c">
+
+The remaining weights are easily calculated by trigonometry:
+
+\\[W_3 = \frac{W_1}{\sin 30} = \frac{10}{0.5} = 20\:\rm{lbs}\\]
+
+and
+
+\\[W_2 = W_3 \cos 30 = 20\cdot(0.866) = 17.32\:\rm{lbs}\\]
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 4
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/25/2006 03:03:00 PM
+-----
+BODY:
+Same pulley system as in Problems 1---3, but this time we have \\(W_1= 20\:\rm{lbs}\\), \\(W_2= 10\:\rm{lbs}\\), and \\(W_3= 25\:\rm{lbs}\\). This is a bit annoying, because our polygon of forces will no longer be a right triangle. What to do?
+
+Well, the book says to use "graphical construction" and use a protractor to measure the angles of the string. Remember, this book was written almost 60 years ago, when engineering students were expected to know how to draw. A student back then would pull out his (yes, almost always *his*) trusty compass and scale, lay off a vertical line of 25 units, then scribe a 20-unit-radius arc from the bottom of the vertical line and a 10-unit-radius arc from the top. Where the arcs cross is the third corner of the triangle. Draw in the other two sides of the triangle and measure the angles. Easy.
+
+<img src="/mechanics/images/004.png" alt="" class="c">
+
+A method more comfortable to today's student would be to use the [law of cosines][mw], the generalization of the Pythagorean theorem to non-right triangles.
+
+\\[ 10^2 = 20^2 + 25^2 - 2\cdot20\cdot25 \cos \alpha \\]
+
+which gives us \\(\alpha = \cos^{-1} 0.925 = 22.3^\circ \\), which is the angle between the left part of the string and the vertical. Similarly,
+
+\\[ 20^2 = 10^2 + 25^2 - 2\cdot10\cdot25 \cos \gamma \\]
+
+which gives us \\(\gamma = \cos^{-1} 0.65 = 49.5^\circ \\), which is the angle between the right part of the string and the vertical.
+
+[mw]: http://mathworld.wolfram.com/LawofCosines.html
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 5
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/27/2006 04:21:00 PM
+-----
+BODY:
+This is one of those problems where it's easy to make a silly mistake and be off by some integer multiplier. For part a, we draw the free-body diagram of point B (the top of the violin's bridge) as shown below.
+
+<img src="/mechanics/images/005a.png" alt="" class="c">
+
+There are three things to notice about this drawing:
+
+1. We're drawing all four strings as a single line. To make sure our answer isn't off by a factor of four, we call the tension in this four-pack of strings 4T rather than just T. That way, when we solve for T we get the tension in each individual string, which is what is asked for.
+
+2. We're aligning the axes so that the string tensions on either side of the bridge are at the same angle to the axes. This gives the problem a symmetry that cuts down on some of our work.
+
+3. Because the string tension is constant across the bridge and because of our choice of axes, equilibrium in the x-direction requires the bridge force of 20 lbs to be aligned with the y-axis. Now we only have to deal with equilibrium in the y-direction.
+
+The equilibrium equation is
+
+\\[ \sum F_y = 20 - 4 T \sin 10 - 4 T \sin 10 = 0 \\]
+
+and the solution is
+
+\\[ T = \frac{20}{8 \sin 10} = 14.4\:\rm{lb} \\]
+
+which is our answer for part a.
+
+Part b is similar. First, we align our axes with the force deflecting the string. The slope of the string with respect to these axes is \\(0.25/6.25 = 1/25\\) (recall that the string is 12.5 inches long and the 0.25-inch deflection is at its midpoint).
+
+<img src="/mechanics/images/005b.png" alt="" class="c">
+
+The equation of equilibrium in the y-direction is
+
+\\[ \sum F_y = F - 2 \left[ 14.4 \left( \frac{1}{\sqrt{626}} \right) \right] = 0 \\]
+
+and the solution is \\( F = 1.15\:\rm{lb}\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 6
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/29/2006 09:18:00 PM
+-----
+BODY:
+We're going to cheat a bit on this one. At the point in the book where this problem is assigned, you're not supposed to know about moments. You're supposed to determine the resultant force and its location by a sequence of parallelogram-of-forces constructions--starting with two of the applied forces, get their resultant, then get the resultant of that force with the third applied force, and so on until all the applied forces are exhausted. This is, frankly, a pain in the ass, especially for students who haven't had the drafting experience that the students of 60 years ago had. So we're going to pretend that this problem was assigned after moments are covered.
+
+The easiest way to do this problem is to project all the forces down onto the line that runs along the bottom edge of the plate (which we'll call the "baseline" of this problem). We can do this because a force has the same effect acting at any point along its line of action.
+
+<img src="/mechanics/images/006a.png" alt="" class="c">
+
+We now break each of the angled forces into its horizontal and vertical components and draw them in on that line.
+
+<img src="/mechanics/images/006b.png" alt="" class="c">
+
+We've drawn the horizontal forces a bit above or below their actual lines of action so they don't blend in with the baseline. Our calculations will account for the fact that they run along the baseline.
+
+The horizontal component of the resultant force is
+
+\\[ R_x = 250 + 250 - 300 = 200\:\rm{lb}\\]
+
+which is 200 lb to the right. The vertical component of the resultant is 
+
+\\[ R_y = 433 - 500 - 433 + 300 = -200\:\rm{lb} \\]
+
+which is 200 lb down. To resultant is therefore \\( \sqrt{200^2 + 200^2} = 283\:\rm{lb} \\) acting at a 45° angle down and to the right.
+
+The location of the resultant force can be described in many ways. Because we went to the effort of projecting all the applied forces down the baseline, we're going to determine where the line of action of the resultant intersects that baseline. (Because the resultant is at a 45° angle, it must intersect the baseline somewhere.) We can assume, with no loss of generality, that the resultant force acts at that intersection point.
+
+To get the intersection point, we first take sum the moments of the applied forces about Point A, the lower left corner of the plate:
+
+\\[ M_A = -433\cdot0.928 - 433\cdot3.464 + 300\cdot9 = 798.1\:\rm{in\cdot lb} \\]
+
+where we've taken counterclockwise as positive. This must be the same as the moment about A produced by the resultant. Because the horizontal component of the resultant acting at the intersection point passes through Point A, it contributes nothing to the moment about A. Therefore, the downward component of 200 lb must have a lever arm of \\(798.1/200 = 3.99\:\rm{inches}\\) to produce that moment, and it must act to the left of Point A for the moment to be counterclockwise. The line of action of the resultant force, then, intesects the baseline of the plate 3.99 inches to the left of the bottom left corner.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+PING:
+TITLE: Problem 7
+URL: http://www.leancrew.com/mechanics/2006/01/problem_7.html
+IP: 204.10.137.181
+BLOG NAME: Den Hartog’s Mechanics
+DATE: 02/13/2006 10:24:38 PM
+Taking an approach similar to the previous problem, we project all the applied forced along their lines of action to a common baseline. In this case, the baseline will be the line of action of the 200-ton force that...
+-----
+
+--------
+AUTHOR: drang
+TITLE: Problem 7
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/30/2006 02:51:00 PM
+-----
+BODY:
+Taking an approach similar to the [previous problem][1], we project all the applied forced along their lines of action to a common baseline. In this case, the baseline will be the line of action of the 200-ton force that is pushing the ship to the left (OK, *port*) and is perpendicular to the ship's fore-and-aft centerline.
+
+<img src="/mechanics/images/007.png" alt="" class="c" />
+
+Again, I've drawn the forces a bit off the baseline so they're easier to see.
+
+The component of the resultant force in the x-direction is
+
+\\[ R_x = 150 - 125 - 100 = -75\:\rm{tons} \\]
+
+or 75 tons in the aft direction. The component of the resultant force in the y-direction is
+
+\\[ R_y = 173 + 200 = 373\:\rm{tons} \\]
+
+or 373 tons to port. The resultant, therefore has a magnitude of \\(\sqrt{75^2 + 373^2} = 381\:\rm{tons} \\) and acts back and to the left at an angle of \\( \tan^{-1} (373/75) = 78.6^\circ \\) to the centerline of the ship.
+
+As before, we use moments to determine the line of action of the resultant force. The moment of the applied forces about Point A is
+
+\\[ M_A = 150 \cdot 20 - 125 \cdot 20 + 100 \cdot 69.28 = 12,428\:\rm{ft \cdot tons} \\]
+
+in the counterclockwise direction. The resultant force must generate this same moment about A. Because the line of action is not parallel to the centerline of the ship, we can assume the resultant acts at the centerline. (Recall that a force has the same effect no matter where it acts along its line of action. We are therefore allowed to choose a location for the force along that line that makes our calculations easy.) With that location, the x-component of the resultant contributes nothing to the moment about A and the lever arm of the y-component must be \\( 12,428/373 = 33.3\:\rm{ft} \\) forward of Point A. This is \\( 80 - 33.3 = 46.7\:\rm{ft} \\) behind the bow of the ship.
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_01/problem_6.html
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 8
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/30/2006 03:52:00 PM
+-----
+BODY:
+In this problem, we'll start by projecting all of the applied forces along their lines of action to the centerline of the barge.
+
+<img src="/mechanics/images/008.png" alt="" class="c" />
+
+The towline forces, when projected onto the baseline, act at a distance \\(10 / \tan 30^\circ = 17.3\:\rm{ft} \\) back from the bow, which is 82.7 ft from the stern.
+
+The x-component of the resultant force is 
+
+\\[ R_x = 86.6 + 303 + 217 = 606\:\rm{lb} \\]
+
+and the y-component of the resultant is
+
+\\[ R_y = 175 - 125 - 50 = 0 \\]
+
+so the resultant is 606 lb in the forward direction.
+
+The moment of the applied forces about Point A (where the towline forces intersect) is
+
+\\[ M_A = 50 \cdot 82.7 = 4,134\:\rm{ft \cdot lb} \\]
+
+and the resultant must generate that same counterclockwise moment. Because the resultant is parallel to the centerline of the barge and in the forward, it must act at a distance \\(4134/606 = 6.82\:\rm{ft}\\) to the right of the centerline. The back of the book has it as 3.17 ft inboard from right side, which is (except for some roundoff error in the last digit) the same thing.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 9
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/30/2006 08:52:00 PM
+-----
+BODY:
+This is a classic sort of problem, an academic exercise that isn't really based on a real-world example. You're likely to see problems like this in textbooks today.
+
+We start with the point from which the 100 lb weight is hung. The free-body diagram of this point looks like this
+
+<img src="/mechanics/images/009a.png" alt= "" class="c" />
+
+The equilibrium equation for the y-direction is
+
+\\[ \sum F_y = \frac{T_2}{\sqrt{2}} - 100 = 0 \\]
+
+from which we learn that \\(T_2 = 141.4\:\rm{lb}\\). Using this result in the equilibrium equation in the x-direction
+
+\\[ \sum F_x = -T_1 + \frac{T_2}{\sqrt{2}} = 0 \\]
+
+gives us \\(T_1 = 100\:\rm{lb}\\).
+
+We now move to the other point and draw the free-body-diagram
+
+<img src="/mechanics/images/009b.png" alt= "" class="c" />
+
+Equilibrium in the y-direction gives us the equation
+
+\\[ \sum F_y = T_4 \frac{\sqrt{3}}{2} - 100 = 0 \\]
+
+from which we get \\( T_4 = 200/\sqrt{3} = 115.5\:\rm{lb} \\). Using this in the equilbrium equation for the x-direction
+
+\\[ \sum F_x = T_3 - \frac{T_4}{2} - 100 =  0 \\]
+
+gives us \\( T_3 = 100/\sqrt{3} + 100 = 157.7\:\rm{lb} \\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 10
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 01
+CATEGORY: Chapter 01
+
+DATE: 01/30/2006 09:10:00 PM
+-----
+BODY:
+The drawing in the book shows us everything we need to write the equations for the resultants. The x-component (right positive) is
+
+\\[ R_x = \frac{F_2}{\sqrt{2}} + F_3 + \frac{F_4}{\sqrt{2}} - \frac{F_6}{\sqrt{2}} - F_7 - \frac{F_8}{\sqrt{2}} \\]
+
+or
+
+\\[ R_x = \frac{1}{\sqrt{2}}(F_2 + F_4 - F_6 - F_8) + (F_3 - F_7) \\]
+
+and the y-component (up positive) is
+
+\\[ R_y = F_1 + \frac{F_2}{\sqrt{2}} - \frac{F_4}{\sqrt{2}} -F_5 - \frac{F_6}{\sqrt{2}} + \frac{F_8}{\sqrt{2}} \\]
+
+or
+
+\\[ R_y = \frac{1}{\sqrt{2}}(F_2 - F_4 - F_6 + F_8) + (F_1 - F_5) \\]
+
+With these equations in hand, we can substitute in the cylinder forces. For part a, the resultants are: \\(R_x = 12.1\\), \\(R_y = 5\\), and therefore \\(R = \sqrt{12.1^2 + 5^2} = 13.1\\) with the resultant directed at an angle of \\(\tan^{-1}(5/12.1) = 22.5^\circ\\) from horizontal up and to the right.
+
+For part b, the resultants are:  \\(R_x = -3\\), \\(R_y = 19.7\\), and therefore \\(R = \sqrt{3^2 + 19.7^2} = 19.9\\) with the resultant directed at an angle of \\(\tan^{-1}(3/19.7) = 8.7^\circ\\) from vertical down and to the left.
+
+Radial engines were fairly common from the early days of flight through WWII and would have been fresh in the minds of students in 1948, when the first edition of *Mechanics* was published. Here's a picture of one
+
+<img src="http://www.cr.nps.gov/museum/exhibits/tuskegee/lgimage/airengine2.jpg" alt="" class="c" />
+
+taken from a site devoted the [history of the Tuskegee Airmen][1].
+
+
+[1]: http://www.cr.nps.gov/museum/exhibits/tuskegee/airgallery.htm
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 11
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 02/13/2006 09:53:27 PM
+-----
+BODY:
+Most of the work of this problem is figuring out the geometry of the boom and rope. With the 10 ft boom at a 45° angle, its horizontal and vertical projections are both \\( 10\cdot\sin 45^\circ = 10/\sqrt{2} = 7.07\:\rm{ft} \\). This is equal to the vertical projection of the rope; the horizontal projection of the rope is therefore \\( 10/\sqrt{2}\cdot\cot 30^\circ = 10\sqrt{3}/\sqrt{2} = 12.25\:\rm{ft} \\). The difference of the horizontal projections is 5.18 ft, which is the distance between Point A and the lower anchor point of the rope.
+
+<img src="http://www.leancrew.com/mechanics/images/011.png" class="c" alt="" />
+
+To determine the moment of the rope tension about Point A we can do one of two things:
+
+1. figure out the perpendicular distance between the rope and Point A and use that as the lever arm of the force; or
+
+2. determine the horizontal and vertical components of the rope tension, assume that they act at a convenient point along the line of action, determine the horizontal and vertical distances of that point from Point A, and use those as the lever arms of the force components.
+
+Although it takes more time to write out the second option, it takes less time to do, especially if we're clever about where we assume the force acts. (Remember, we can assume that a force acts at any point along its line of action.)
+
+Assume the force acts at the rope's lower anchor point. The horizontal component of the force will have a lever arm of zero, so the moment contributed by the horizontal component will be zero--we don't have to bother calculating the magnitude of the horizontal component. The vertical component of the force is \\( 1000\cdot\sin^\circ = 500\:\rm{lb} \\), so the moment about Point A is \\( 500\cdot 5.18 == 2588\:\rm{ft\cdot lb} \\) counterclockwise (it's pulling back on Point B and tending to turn the boom in the CCW direction). This is the answer to part *a*.
+
+Part *b* is easier. The weight acts straight down and its moment about Point A is \\( (7.07\:\rm{ft}) W\\) clockwise. Den Hartog gives the answer as \\(7.07W\:\rm{ft\cdot lb}\\), which is, strictly speaking, only correct if W is given in pounds. Our answer is correct regardless of the units of W.
+
+For part *c*, we equate the two moments: 
+
+\\[ 2588\:\rm{ft\cdot lb} = (7.07\:\rm{ft}) W \\]
+
+so
+
+\\[ W = \frac{2588\:\rm{ft\cdot lb}}{7.07\:\rm{ft}} = 366\:\rm{lb} \\]
+
+I've been very careful in this problem to carry the units along to show how the units of W arise naturally from the calculation. Normally, if the problem is simple and the units are consistent, I don't bother writing down the units in the intermediate calculations.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+mechanics problem solution static
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 12
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 03/06/2006 09:53:12 AM
+-----
+BODY:
+The point and forces of interest are laid out as follows:
+
+<img src="/mechanics/images/012a.png" class="c" />
+
+Taking clockwise as positive, the moment about the pulley center, O, is
+
+\\[ M_O = 200 \cdot 8 - 100 \cdot 8 - 100\cdot 6 = 200\:\rm{lb}\cdot\rm{in} \\]
+
+which is the answer to part (a). We could do essentially the same thing to get the moment about point A, but just to throw in a bit of variety, we'll start by taking the static equivalent of the forces at O
+
+<img src="/mechanics/images/012b.png" class="c" />
+
+and transforming the moment to point A:
+
+\\[ M_A = M_O - 100 \cdot 8 = 200 - 800 = -600\:\rm{lb}\cdot \rm{in} \\]
+
+or \\(600\:\rm{lb}\cdot \rm{in} \\) counterclockwise. This is the answer to part (b).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+mechanics problem solution statics pulley
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 13
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 03/06/2006 10:12:18 AM
+-----
+BODY:
+This is a great problem for solving with a spreadsheet. Here's one way to lay out the solution.
+
+| Bucket | Angle | Lever arm | Force | Moment   |
+|-------:|------:|----------:|------:|---------:|
+|     2  |  10.0 |    1.389   |  50   |    69.5  |
+|     3  |  32.5 |    4.298   |  75   |   322.4  |
+|     4  |  55.0 |    6.553   |  75   |   491.5  |
+|     5  |  77.5 |    7.810   |  75   |   585.8  |
+|     6  | 100.0 |    7.878   |  50   |   393.9  |
+|     7  | 122.5 |    6.747   |  25   |   168.7  |
+|        |       |           | Total |  2031.7  |
+
+The lever arm is calculated through the formula \\( 8 \cdot \sin \theta \\). The answer given in the back of the book is rounded to \\( 2032\:\rm{lb}\cdot \rm{ft} \\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+mechanics problem solution statics waterwheel
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 14
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 1
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 03/07/2006 09:39:58 AM
+-----
+BODY:
+<img src="/mechanics/images/014.png" class="c" />
+
+There are two ways to go about solving this problem: 
+
+1. we can find the perpendicular distance from the line of action of force P to point O; or
+2. we can break P into its horizontal and vertical components and find their individual moments about O.
+
+The second way seems a bit faster because the horizontal component of P runs right through O and does not contribute to the moment about O. Thus, the sum of the moments about O (clockwise positive) is:
+
+\\[ \sum M_O = 1000 \cdot 3 - (P \: \sin 30^\circ) \cdot 12 = 0 \\]
+
+We solve this equation for P to get \\( P = 3000 / 6 = 500\: \rm{lb} \\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+mechanics statics problem solution tension
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 15
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/04/2006 03:23:20 PM
+-----
+BODY:
+Let's start this one by translating the rower's forces along their lines of action to the stern of the boat. We'll also decompose the pusher's angled force into its two perpendicular components. The couple can be put anywhere, so we'll move it back toward the stern, too. Here is our equivalent force system
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/015.png" />
+
+The components of the resultant force at the stern are easily calculated.
+
+\\[ R_x = 20 + 20 + \frac{80}{\sqrt{2}} = 96.57\:\rm{lb} \\]
+
+and
+
+\\[ R_y = -\frac{80}{\sqrt{2}} = -56.57\:\rm{lb} \\]
+
+Therefore, the resultant force has a magnitude of
+
+\\[ \sqrt{96.57^2 + (-56.57)^2} = 111.9\:\rm{lb} \\]
+
+and points forward and to the right at an angle of 
+
+\\[ \tan^{-1}\frac{56.57}{96.57} = 30.36^\circ \\]
+
+from the centerline of the boat.
+
+To get the location of the resultant force, we need to consider the moments. The resultant moment about the center of the stern, which we'll call Point A, is
+
+\\[ M_A = 30 - \frac{80}{\sqrt{2}}\cdot 1.5 = -54.85\:\rm{lb \cdot ft} \\]
+
+Only \\(R_x\\) contributes any moment about A, so the intersection of the line of force of the resultant with the line of the stern is
+
+\\[ \frac{-54.85}{96.57} = -0.57\:\rm{ft} \\]
+
+from A. On our diagram, this would be 0.57 ft (6.82 in) below Point A; on the boat, it would be 0.57 ft to the right (OK, *starboard*) of Point A.
+
+This is a perfectly good answer, but unfortunately, Den Hartog prefers to tell us where the resultant intersects the centerline of the boat, not where it intersects the stern. So to check our answer against his, we need to do a little trigonometry.
+
+\\[ 6.82 \cot 30.36^\circ = 6.82 \frac{96.57}{56.57} = 11.64\:\rm{in} \\]
+
+So the line of action of the resultant force intersects the centerline of the boat 11.64 inches forward of the stern. We now have our answer in a form that agrees with Den Hartog.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 16
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/04/2006 04:43:58 PM
+-----
+BODY:
+This is a quick one.
+
+The resultant moment about the center of the drum, which we'll call Point O, is
+
+\\[ M_O = 1200 - 1200 \cdot 1 = 0 \\]
+
+and the resultant force is simply 1200 lb pointing down. Because the resultant moment about Point O is zero, the line of action of the resultant force must act through that point.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 17
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/04/2006 08:26:26 PM
+-----
+BODY:
+This is another easy one if we go about it right. We don't know the reaction force, R, and we're not required by the problem statement to find it. Our best strategy for finding L, then, is to try to use an equilibrium equation that includes L but doesn't include R. 
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/017.png" />
+
+That equation will be the one for moment equilibrium about Point S.
+
+\\[ \sum M_S = 2L - 100 \cdot 48 = 0 \\]
+
+Solving this equation, we get L = 2400 lb.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 18
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/24/2006 10:48:46 PM
+-----
+BODY:
+Let's start with a simplified free-body diagram of the right arm of the nutcracker.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/018.png" />
+
+Since perpendicular distances are all we care about, we don't have to worry about the curved part of the arm. Also, since the nutcracker is symmetric and the applied forces are symmetric, the solution will be symmetric. So the forces acting on the left arm will be mirror images of the forces acting on the right arm: equal in magnitude and opposite in direction.
+
+To get the force acting on the nut, *N*, we take the moments about point A. This keeps the unknown link force, *L*, out of the equation. The moment equilibrium equation is
+
+\\[ \sum M_A = 18\:\cdot\:5.75 - N\:\cdot\:0.75 = 0 \\]
+
+which we solve to find *N* = 138 lb, which is the answer to part a).
+
+We use this result in the horizontal force equilibrium equation,
+
+\\[ \sum F_x = 138 - 18 - L = 0,\\]
+
+to solve for the link force, *L* = 120 lb to the left. This is the answer to part b).
+
+Note that *L* is the force the link is exerting on the arm. By Newton's Third Law, we know that the force the right arm is exerting on the link is 120 lb to the right. And by the mirror symmetry mentioned above, we know that the force the left arm is exerting on the left end of the link is 120 lb to the left. Thus, the link is being pulled by 120 lbs at each end, and we say that the link is under 120 lbs of *tension*.
+
+Similarly, the nut is being squeezed by a pair of forces and we say that it is under 138 lbs of *compression*.
+
+It's also worth noting that because we get 138 lbs of nutcracking force out of an applied force of just 18 lbs, the nutcracker is said to provide a *mechanical advantage* of \\(138/18 = 5.75/0.75 = 7.67\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 19
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/25/2006 09:34:36 PM
+-----
+BODY:
+Because the bar and the pan are in equilibrium when there are no weights, the bar and pan collectively contribute no moment about the balance point and can be left out of our equilibrium equation.
+
+For part a), we take the moments about the balance point, which we'll call O:
+
+\\[ \sum M_O = W_1 a - W_2 x = 0 \\]
+
+Solving for \\(W_1\\), we get
+
+\\[ W_1 = W_2 \frac{x}{a} \\]
+
+For part b), we first note that the maximum capacity will be when \\(W_2\\) is slid all the way to the left end of the bar. So we use our solution to part a) and substitute in \\(x = b = 12\:\rm{in}\\), \\(a = 1\:\rm{in}\\), and \\(W_2 = 1\:\rm{lb}\\). Thus
+
+\\[ W_{1max} = 1\frac{12}{1} = 12\:\rm{lb} \\]
+
+In general, for \\(a = 1\\) and \\(W_2 = 1\\), 
+
+\\[ W_1 = 1 \frac{x}{1} = x \\]
+
+where, because I've dropped the units, \\(x\\) must be measured in inches and \\(W_1\\) in pounds. We see, then, that the long arm can be marked with a linear scale, every inch representing a pound.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 20
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/26/2006 10:14:13 PM
+-----
+BODY:
+Den Hartog slips a couple of advanced concepts into this problem, items that aren't properly covered until Chapter 3. But their introduction is gentle and shouldn't cause much head scratching.
+
+First, we have to deal with the force coming from the pressure pushing up on the valve and transmitted by the valve to the horizontal arm. The pressure is acting over a circular area with a diameter of \\(d\\). Because pressure is measured in force units per area units--e.g., pounds per square inch in part b) of this problem--it seems reasonable to believe that the force due to pressure on a flat plate is equal to the pressure multiplied by the area over which the pressure acts. And that's exactly right. So here the upward force on valve is 
+
+\\[ F_p = p \left (\frac{\pi d^2}{4} \right ) \\]
+
+When he described the weight of the arm itself, Den Hartog says that it's "concentrated at a distan.ce \\(c\\) from the valve." This, of course, is nonsense. The weight of the arm is spread out over the length of the arm; it isn't concentrated at a single point. But, as we'll see later, the *effect* of its distributed weight is equivalent to a concentrated force acting at its center of mass.
+
+OK, enough theory. We know the weight of the bar, \\(w\\); we know the pressure force, \\(F_p\\); we don't know the required weight at the right end of the arm, \\(W\\), or the reaction force at the pivot at the left end of the arm. Since we're asked in part a) to determine \\(W\\), it makes since to try to find an equilibrium equation that includes \\(W\\) but doesn't include the pivot force. The equilibrium equation for moments about the pivot--which we'll call O--will do the trick:
+
+\\[ \sum M_O = F_p b - w (b+c) - W (b+a) = 0 \\]
+
+The pivot force doesn't show up in this equation because its lever arm is zero. Substituting in the expression for \\(F_p\\) and solving for \\(W\\), we get
+
+\\[ W = \frac{p \pi d^2}{4}\frac{b}{b+a} - w \frac{b+c}{b+a} \\]
+
+This is the weight that will exactly balance the pressure. If the pressure is less than \\(p\\), the weight will push the valve down onto the top of the boiler and the contact force between the boiler wall and the valve will provide the extra upward force needed to satisfy equilibrium. If, on the other hand, the pressure is increased above \\(p\\), the weight will not be enough to hold the arm down and steam will escape out the valve, reducing the pressure back down to \\(p\\). That's the purpose of a safety valve--by opening at a given pressure, it limits the pressure in the boiler to a safe level.
+
+For part b), we simply substitute the given values into the equation.
+
+\\[ W = \frac{200 \pi 2^2}{4}\frac{3}{3+12} - w \frac{3+5}{3+12} = 125.7 - 0.533 w \\]
+
+which is, except for some rounding, the answer in the back of the book. I'll never understand why Den Hartog didn't give a numerical value for \\(w\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 21
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/26/2006 10:34:27 PM
+-----
+BODY:
+Here's a problem where we have two unknowns, the hand force \\(P\\) and the reaction force at the wheel, which we'll call \\(R\\), and two equilibrium equations, one for the vertical forces and one for the moments about any point. (Because there are no horizontal forces, the horizontal equilibrium equation is 0 = 0, which, while certainly true, gives us no information.)
+
+To avoid having to solve simultaneous equations, a common trick in problems like this is to take the moments about a point on the line of action of one of the unknown forces. The moment arm of that force will then be zero and it will drop out of the equilibrium equation. Solve the moment equation for the single unknown, and then substitute that answer into the other equilibrium equation to solve for the second unknown.
+
+For this problem, let's take the moments about the center of the wheel:
+
+\\[ \sum M_O = 120\:\cdot\:15 - P\:(15 + 35) = 0 \\]
+
+Solving, we get *P* = 36 lbs. Using this in the vertical equilibrium equation
+
+\\[ \sum F_y = R - 120 + 36 = 0 \\]
+
+we get *R* = 84 lbs. This is the upward force the ground exerts on the wheel. By Newton's Third Law, the wheel then exerts a downward force on the ground of 84 lbs.
+
+I didn't bother drawing a free-body diagram in this case because the drawing in the book is so close to an FBD that it didn't seem worth the bother.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 22
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/27/2006 05:31:42 PM
+-----
+BODY:
+Here's another problem where the drawing in the book is good enough to use as a free-body-diagram.
+
+There are two unknowns in this problem: the force, *R*, that the water exerts on the oar, and the force, *G*, that the oarlock exerts on the oar. To determine *R* without first (or simultaneously) determining *G*, we take the moments about the oarlock. The equilibrium equation is
+
+\\[ \sum M_G = 50\:\cdot\:15 - 60 R = 0 \\]
+
+which leads to *R* = 12.5 lbs.
+
+To solve for *G*, we can either
+
+* use this value of *R* in a force equilibrium equation or
+* come up with another moment equilibrium equation that allows us to solve for *G* without knowing *R*.
+
+Since we did Problem 21 the first way, let's do this one the second way. Taking moments about the tip of the oar, we get this equilibrium equation:
+
+\\[ \sum M_R = 50 (15+60) - 60 G = 0 \\]
+
+The solution is *G* = 62.5 lbs.
+
+**Addendum**  
+Now you may be asking yourself: Is it kosher to use two moment equilibrium equations in a planar statics problem? Aren't the three equations of planar statics \\(\sum F_x = 0\\), \\(\sum F_y = 0\\), and \\(\sum M = 0\\)? As it turns out, the answer to both these questions is "Yes," and there is no contradiction.
+
+The three equations of planar statics are indeed \\(\sum F_x = 0\\), \\(\sum F_y = 0\\), and \\(\sum M = 0\\), but mathematics allows us to use linear combinations of these equations to solve them. So, for this problem
+
+\\[ \sum F_y = 50 - G + R = 0 \\]
+
+and if we multiply this equation by 60 and add it to the \\(\sum M_G\\) equation we used to solve for *R*, we get
+
+\\[ 50\:\cdot\:60 - 60 G + 60 R + 50\:\cdot\:15 - 60 R = 0 \\]
+
+which simplifies to
+
+\\[ 50 (15+60) - 60 G = 0 \\]
+
+the same as the \\(\sum M_R\\) equation.
+
+This is not magic. The equilibrium equation for moments about some point will always be a linear combination of the equilibrium equation for moments about another point and one or more of the force equilibrium equations. So it *is* kosher to use two moment equilibrium equations, and it will often be advantageous for us to do so.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 23
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/27/2006 09:37:46 PM
+-----
+BODY:
+This is a problem where free-body diagrams will definitely come in handy. So let's start by showing FBDs of the three pieces of this double lever system: the top lever, the bottom lever, and the link between them.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/023.png" />
+
+I've taken the liberty of solving the equilibrium problem for the link as I drew its FBD. The link is what is often called a *two-force member*. As you might expect, a two-force member has exactly two forces acting on it. Force equilibrium requires that the two forces be equal in magnitude and opposite in direction. ("Equal and opposite" is usually used in connection with Newton's Third Law, but with two-force members, equal and opposite comes from equilibrium.) Moment equilibrium requires that they lie on the same line of action. So when we encounter a bar with forces applied only at the ends, we can say immediately that the forces run along the bar and are equal and opposite. For the link in this problem, we'll call those forces *L*.
+
+The link forces we just described are the forces the upper and lower levers exert on the link. By Newton's Third Law, we know that the forces the link exerts on the upper and lower levers are equal and opposite. So those forces are also *L*.
+
+We'll start with the lever we know the most about, which is the bottom one. Moment equilibrium about the pivot point at the left end gives us
+
+\\[ \sum M_A = 300\,\cdot\,1 - 6 L = 0 \\]
+
+and a solution of *L* = 50 lb.
+
+We can use this result in the equilibrium equation for moments about the right pivot in the top lever.
+
+\\[ \sum M_B = 7 P - 50\,\cdot\,1 = 0 \\]
+
+Solving this gives us *P* = 7.14 lb, which matches the answer in the back of the book.
+
+Notice that since we weren't asked to determine \\(R_A\\) or \\(R_B\\), we took our moments about A and B, which kept the pivot reaction forces out of our equilibrium equations. This is a solution strategy we'll use again and again.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 24
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/29/2006 12:11:12 AM
+-----
+BODY:
+For part a), we'll just use the drawing of the left bellcrank as our free-body-diagram. Taking the moments about the pivot point, which we'll call O, we get the equilibrium equation
+
+\\[ \sum M_O = T_1 a - T_2 b = 0 \\]
+
+and the relationship
+
+\\[ T_1 a = T_2 b. \\]
+
+For part b), we'll need to do some drawing. To get the same equilibrium relationship, we need to define *a* and *b* as the perpendicular distances from the pivot point to the lines of action of \\(T_1\\) and \\(T_2\\).
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/024.png" />
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 25
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/29/2006 12:50:50 AM
+-----
+BODY:
+The free-body-diagram of the ladder looks like this
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/025.png" />
+
+Taking moments about the hinge, H, we get the equilibrium equation
+
+\\[ \sum M_H = 1000\frac{L}{2} \sin 45^\circ + 200 \frac{4 L}{5} \sin 45^\circ - T \cos 15^\circ L = 0 \\]
+
+where *T* cos 15° is the component of the rope tension perpendicular to the ladder. Because the unknown length of the ladder, *L*, is common to all terms, it drops out of the equation, and we can solve for the rope tension, *T* = 483 lbs.
+
+We can get the two components of the hinge force from the two force equilibrium equations. For horizontal forces
+
+\\[ \sum F_x = 483 \sin 30^\circ - F_{Hx} = 0 \\]
+
+and \\(F_{Hx} = 242\:\rm{lbs}\\). For vertical forces
+
+\\[ \sum F_y = 483 \cos 30^\circ - 1000 - 200 + F_{Hy} = 0 \\]
+
+and \\(F_{Hy} = 782\:\rm{lbs}\\). Except for some roundoff--which I'm going to attribute to some sloppy slide rule work by one of Den Hartog's grad students--these answer match those in the back of the book.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 26
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/29/2006 09:30:05 PM
+-----
+BODY:
+The free-body-diagram for the jeep looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/026.png" />
+
+To get the vertical force on the front axle, we take moments about the rear wheel contact point, B:
+
+\\[ \sum M_B = 1500\,\cdot\,2 - 2500\,\cdot\,4 + 8 F_{Ay} = 0 \\]
+
+From this equilibrium equation we get \\(F_{Ay} = 875\,\rm{lbs}\\). To get the vertical force on the rear axle, we use this answer in the vertical force equilibrium equation:
+
+\\[ \sum F_x = 875 + F_{By} - 2500 = 0 \\]
+
+From this we get \\(F_{By} = 1625\,\rm{lbs}\\).
+
+Notice that Den Hartog doesn't ask us to determine the horizontal components of \\(F_A\\) and \\(F_B\\). Good thing, too, because there isn't enough information to do so. We can easily figure out that the sum of the two horizontal forces is 1500 lbs, but that's as far as we can go. Look back at the FBD: there are four unknown forces acting on the jeep. Since we only have three equations of planar statics, the mathematics won't allow us to get a solution for all four unknowns.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 27
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/29/2006 10:50:49 PM
+-----
+BODY:
+Whenever you see rollers in a problem like this, you're to assume that the force acting through the rollers is perpendicular to the surface(s) the rollers are rolling on. For this problem we use this convention to draw our free-body-diagrams like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/027.png" />
+
+We've used Newton's Third Law to set the forces between the two blocks equal and opposite to each other.
+
+Looking at the upper block first, we write the force equilibrium equations as
+
+\\[ \sum F_x = B \sin \alpha - R_2 = 0 \\]
+
+and
+
+\\[ \sum F_y = B \cos \alpha - W = 0 \\]
+
+From the second of these, we see that the \\(B = \frac{W}{\cos \alpha}\\), which is one of the answers to part b). Another answer to part b) comes from substituting this into the first equation to get \\(R_2 = W \tan \alpha\\).
+
+We use the expression for *B* to write the force equilbrium equations for the lower block as
+
+\\[ \sum F_x = F - B \sin \alpha = F - W \frac{\sin \alpha}{\cos \alpha} = F - W \tan \alpha = 0 \\]
+
+and
+
+\\[ \sum F_y = R_1 - B \cos \alpha = R_1 - W = 0 \\]
+
+The first of these gives us the answer to part a): \\(F = W \tan\alpha\\). This allows us to rewrite our expression for \\(R_2\\) as \\(R_2 = F\\), which matches the answer in the back of the book. (We also could have gotten this answer from horizontal equilibrium of the two blocks taken as a whole.) The second gives us another one of the answers to part b): \\(R_1 = W\\).
+
+You may have noticed by now that our solution for *B* doesn't seem to match the one in the back of book, which is \\(B = \sqrt{F^2 + W^2}\\). But the apparent mismatch disappears with a bit of algebra and trig:
+
+\\[ B = \sqrt{F^2 + W^2} = \sqrt{W^2 (\tan^2 \alpha + 1)} = \sqrt{W^2 \sec^2 \alpha} = \frac{W}{\cos \alpha} \\]
+
+As for part c), we want
+
+\\[ \frac{F}{W} = \tan\alpha = \frac{1}{10} \\]
+
+so \\(\alpha = \tan^{-1}\frac{1}{10} = 5.71^\circ = 5^\circ 43'\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 28
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/31/2006 08:38:01 PM
+-----
+BODY:
+Equilibrium of the hanging weight tells us at a glance that the tension in the cable is \\(W_2\\), so I'm not going to bother with free-body-diagram of that part. Also, if you recall the discussion at the beginning of [Problem 1][1], the tension will be the same on both sides of the frictionless pulley. So our FBD of the weight on the inclined plane looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/028.png" />
+
+Because the inclined plane is also frictionless, the force it exerts on the weight is perpendicular to the plane. When we start doing friction problems in Chapter 6 (which seems a long way off at the pace I'm going), we'll learn that this force is usually called the *normal force*, which is why we're calling it *N*. ("Normal" in this case meaning "perpendicular", not "regular.")
+
+Since two out of the three forces acting on the weight are aligned with the plane it's helpful to align our axes with it. With these axes, the equilibrium equation along the incline is
+
+\\[ \sum F_x = W_2 - W_1\,\sin\alpha = 0 \\]
+
+and the solution is \\(W_2 = W_1\,\sin\alpha\\), which is the answer to part a). Since we weren't asked to determine *N*, we don't need to use the other force equilibrium equation. This, by the way, is why aligning the axes with the incline was a good idea--if we hadn't, we'd have to solve simultaneous equations.
+
+For part b), we just plug and chug:
+
+\\[ W_2 = 50\,\sin30^\circ = 50\,\cdot\,\frac{1}{2} = 25\,\rm{lbs} \\]
+
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_01/problem_1.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 29
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 05/31/2006 09:52:20 PM
+-----
+BODY:
+When the truck is on the verge of tipping, the front wheels will start to lift off the ground and the forces at the front wheels will be zero. Using this fact, we draw the free-body-diagram for part a) like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/029a.png" />
+
+The equilibrium equation for moments about point B is
+
+\\[ \sum M_B = 4\,L_1 - 7000\,\cdot\,8 = 0 \\]
+
+and the solution is \\(L_1 = 14,000\,\rm{lbs}\\).
+
+The FBD for part b) is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/029b.png" />
+
+and the moment equilibrium equation is
+
+\\[ \sum M_B = 4\,L_2\,\cos 30^\circ + 10\,L_2\, \sin 30^\circ - 7000\,\cdot\,8 = 0 \\]
+
+and the solution is \\(L_2 = 6,616\,\rm{lbs}\\). Again, I attribute the weird roundoff error in Den Hartog's answer to difficulties in getting the third significant digit on a slide rule.
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 30
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/01/2006 09:46:15 PM
+-----
+BODY:
+The free-body-diagram for the ladder is shown below. Notice that
+
+1. The force at the floor is purely vertical because there's a frictionless wheel at the bottom of the ladder.
+2. The reaction force at the wall is drawn at an (unknown) angle because the hinge there can transmit both vertical and horizontal components of force. As we shall see, the angle won't enter into our equations because of what we are asked to calculate.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/030.png" />
+
+The equilibrium equation for moments about the hinge is
+
+\\[ \sum M_H = 75(2a) + 150(3a) - N(4a) = 0 \\]
+
+and the solution is \\(N = 150\,\rm{lbs}\\).
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 31
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/01/2006 10:24:14 PM
+-----
+BODY:
+The first thing to notice in this problem is that the two arms of the toggle are two-force members (which you may recall from [Problem 23][1]), so the forces transmitted by those arms must be aligned with them. We draw the free-body-diagram of the rolling block at the right end of the toggle like this
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/031a.png" />
+
+The horizontal equilibrium equation is
+
+\\[ \sum F_x = R \cos \alpha - P = 0 \\]
+
+which tells us that \\(R = P/\cos\alpha\\). We can now draw an FBD of the hinge at the center of the toggle
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/031b.png" />
+
+The equilibrium equations for the hinge are
+
+\\[ \sum F_x = L \cos\alpha - R \cos\alpha = 0 \\]
+
+and
+
+\\[ \sum F_y = Q - L \sin\alpha - R \sin\alpha = 0 \\]
+
+From the first of these, and our previous solution, we see that \\(L = R = P/\cos\alpha\\). Plugging this into the second equation gives us
+
+\\[ Q = \frac{P}{\cos\alpha}\sin\alpha + \frac{P}{\cos\alpha}\sin\alpha = 2 P \tan\alpha \\]
+
+which is the solution at the back of the book. Notice that for small angles, *Q* will be much less than *P*. Since toggles like this are usually set up with *Q* as the applied force and *P* as the resistance, you can see how this mechanism is a great force multiplier.
+
+[1]: http://www.leancrew.com/mechanics/chapter_02/problem_23.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 32
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/02/2006 09:38:00 PM
+-----
+BODY:
+Most textbook problems (including the problems in this book) have "weightless" cables and ropes. There are two reasons for this:
+
+1. It makes the problems less cluttered with detail and the student can concentrate on the principles.
+2. The weight of a cable or rope is often very small when compared with the weights it is carrying and taking it to be weightless is then a reasonable approximation.
+
+Here, though, the weight of the rope is essential to the solution of the problem. Because the rope weighs 1 lb/ft, the weight on the left side of the pulley is 10 + *x* + *y* (when *x* and *y* are measured in feet), and the weight on the right side of the pulley is 20 + *x*. These weights must be equal to one another for moment equilibrium about the center of the pulley.
+
+\\[ 10 + x + y = 20 + x \\]
+
+Notice that the semicircle of rope around the top of the pulley contributes no net moment about the center of the pulley because the left and right quarter-circles balance each other out.
+
+The *x* terms cancel and we are left with \\(y = 10\,\rm{ft}\\). We can now find *x* from the length of the rope
+
+\\[ 20 = 2 x + y + \frac{1}{2} \cdot \pi \cdot 1 \\]
+
+Plugging in our value for *y* and solving, we get \\(x = 5 - \pi/4 = 4.21\,\rm{ft}\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 33
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/02/2006 10:03:20 PM
+-----
+BODY:
+Your instructors will likely tell you to always draw free-body diagrams, and they'll be right. But I'm feeling a bit lazy tonight, and I think we can get through this one by just looking at the drawing in the book.
+
+We'll start by figuring out the tension in the left cable, *T*, necessary to balance the weight of the bridge deck. Isolating the bridge deck and taking the moments about its right hinge, we get this equilibrium equation:
+
+\\[ \sum M_{H_1} = 4000 \cdot 8 - 16 T = 0 \\]
+
+The solution is *T* = 2000 lbs. Now we isolate the horizontal bar at the top and take moments about its hinge:
+
+\\[ \sum M_{H_2} = 2000 \cdot 16 - 3000 \cdot 10 - 10 P = 0 \\]
+
+Solving this we get the necessary downward pull on the counter weight rope, *P* = 200 lbs, which is the answer to part a).
+
+Part b) requires no calculations, just a bit of insight. As the bridge deck is tilted upward, the top horizontal bar will tilt up at the same angle, and the cable will remain vertical. (That is, the rectangle formed by the deck, the cable, the top bar, and the upright will turn into a parallelogram. This type of mechanism is called a *four-bar linkage* and we'll be seeing it later in the book.) All of the forces will remain vertical and all of the moment arms will be reduced according to the cosine of the tilt angle. So the new equilibrium equations will be the same as the old equilibrium equations, but with a common term of cos 30° that cancels out. The upshot of all this is that the tension in the left cable will remain 2000 lbs and the downward pull on the counterweight rope will remain 200 lbs.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 34
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/04/2006 08:45:05 PM
+-----
+BODY:
+The idea behind the free-body diagram is that the system as a whole--as well as every single piece of the system, no matter how you break it up--is in equilibrium. Every FBD is as valid as the next (as long as you draw them correctly); the trick is in choosing FBDs that get you to the answer efficiently. This problem is a good example of how to do that.
+
+To start, we'll look at the lifting tong and the block as a single system, using the drawing in the book. There are only two forces: the weight of 2000 lbs acting down and the lifting force acting up. Clearly, the lifting force must be 2000 lbs.
+
+Now we'll look at the pin between the links CD and ED. The FBD looks like this
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/034a.png" />
+
+Because CD and ED are two-force members, we know that the forces in those members act along the lines connecting the pins. Further, because of the tongs' symmetry, we know that the force in CD and the force in ED are the equal. Therefore, from vertical equilibrium
+
+\\[ \sum F_y = 2000 - 2 F_{CD} \frac{1}{6} = 0 \\]
+
+and the solution is
+
+\\[ F_{CD} = 6000\,\rm{lbs} \\]
+
+Now we look at the bellcrank GAC. Crossbar AB is also a two-force member, so the force it exerts on the bellcrank must be horizontal. The FBD is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/034b.png" />
+
+The force at C is known; the direction of the force at A is known but its magnitude is unknown (and is what we are being asked to find); the force at G is unknown in both magnitude and direction. The best strategy, then is to take moments about G to get an expression with the one unknown we are trying to determine.
+
+\\[ \sum M_G = 40 \frac{\sqrt{6^2 - 1^2}}{6} 6000 - 20 F_{AB} = 0 \\]
+
+The solution is \\(F_{AB} = 11,832\,\rm{lbs}\\). The answer in the back of the book is 11,840, which is about as close as you can get (three significant digits) using a slide rule.
+
+The horizontal force at G is now easy to get from horizontal equilibrium:
+
+\\[ \sum F_x = 11,832 - \frac{\sqrt{6^2 - 1^2}}{6} 6000 - F_{Gx} = 0 \\]
+
+The solution is \\(F_{Gx} = 5916\,\rm{lbs}\\). Again, the answer in the back of the book is correct to three digits.
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 35
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/04/2006 08:51:13 PM
+-----
+BODY:
+As we've discussed before, the tension in a rope on either side of a frictionless pulley is constant. Therefore, \\(T_1 = T_2 = T_3 = T\\). To determine the value of *T*, we consider the equilibrium of the floating pulley: the downward force of the weight, *W*, must be balanced by the two upward tension forces. So \\(W = 2 T\\), and therefore \\(T = W/2\\). The tackle gives us a mechanical advantage of 2.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 36
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/05/2006 07:50:58 PM
+-----
+BODY:
+The free-body diagram of the hoist is given below. The three reaction forces are constrained in the horizontal and vertical directions as described in the problem statement.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/036.png" />
+
+The vertical equilibrium equation is
+
+\\[ \sum F_y = R_C - P = 0 \\]
+
+and its solution is \\(R_C = P\\). The horizontal equilibrium equation is
+
+\\[ \sum F_x = R_B - R_A = 0 \\]
+
+and its solution is \\(R_A = R_B\\). Notice that these two solutions give us two pure couples. Therefore, the moment about any point will be the algebraic sum of the two couples:
+
+\\[ \sum M = P a - R_A c = 0 \\]
+
+and the solution is
+
+\\[ R_A = R_B = P \frac{a}{c} \\]
+
+which, except for the sign convention for the reactions at A and B, matches the answer at the back of the book.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 37
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/05/2006 09:15:00 PM
+-----
+BODY:
+We need to be careful with this one. It's drawn as if the bars in the linkage are perpendicular to one another, but that would only be true if the angle \\(\alpha\\) down at the lower left is equal to 45°.
+
+First, we note that the two upper members of the linkage are two-force members. The two lower members, however, are not because they are pinned together at mid-length, which imposes a third force on each bar.
+
+Through a combination of symmetry and vertical equilibrium of the entire linkage, we can say that the vertical reaction forces at the bottom of the linkage are each \\(W/2\\).
+
+The free-body diagram of the pin at the top of the linkage is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/037a.png" />
+
+We've used symmetry to set the two bar forces equal to one another, but if we hadn't noticed the symmetry we would have gotten the same result from horizontal equilibrium. The vertical equilibrium equation is
+
+\\[ 2 F_1 \sin \alpha - W = 0 \\]
+
+and its solution is
+
+\\[ F_1 = \frac{W}{2 \sin \alpha} \\]
+
+Let's now draw the FBD of one of the lower bars.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/037b.png" />
+
+Taking moments about the center of the bar, we get
+
+\\[ \sum M_Q = F_1\cos\alpha(a \sin\alpha) + F_1\sin\alpha(a \cos\alpha) + \frac{W}{2}(a \cos\alpha) - P (a \sin\alpha) = 0 \\]
+
+Substituting in our previous solution for \\(F_1\\) and rearranging, we get
+
+\\[ \frac{3}{2} W a \cos\alpha = P a \sin\alpha \\]
+
+which leads to 
+
+\\[ \frac{P}{W} = \frac{3}{2} \cot\alpha \\]
+
+ 
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 38
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/06/2006 09:48:54 PM
+-----
+BODY:
+The key to this problem is the vertical contact force between the two beams. We'll start by considering the right beam with its right end on the verge of lifting off the support at C.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/038a.png" />
+
+The equilibrium equation for moments about B is
+
+\\[ \sum M_B = 600\cdot5 - 10 F = 0 \\]
+
+and the solution is \\(F = 300\,\rm{lbs}\\).
+
+Now we look at the left beam to determine what force *X* is required to produce 300 lbs at the right end.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/038b.png" />
+
+The equilibrium equation for moments about A is
+
+\\[ \sum M_A = 12 X - 20\cdot300 = 0 \\]
+
+and the solution is \\(X = 500\,\rm{lbs}\\).
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 39
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/06/2006 10:20:45 PM
+-----
+BODY:
+Let's start with a free-body diagram of the block of ice.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/039a.png" />
+
+We've used symmetry to recognize that the forces on either side of the block must be equal. The vertical equilibrium equation is
+
+\\[ \sum F_x = 2 F - 50 = 0 \\]
+
+and the solution is *F* = 25 lbs.
+
+The FBD of one of the tong bars is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/039b.png" />
+
+Moment equilibrium about the pin C gives
+
+\\[ \sum M_C = 25 \cdot 3 + 25 \cdot 6 - 6 N = 0 \\]
+
+The solution of this equation is *N* = 37.5 lbs, which is the answer to part a). Vertical equilibrium tells us that the vertical component of the force at C is zero, so it should be drawn as a purely horizontal force. Horizontal equilibrium tells us that *C* = 37.5 lbs, which is the answer to part b)
+
+The Eugene O'Neill reference that starts off the problem statement is one of those little quirks that places the book in the post-war years.
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 40
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/09/2006 10:13:58 PM
+-----
+BODY:
+Now here is a problem that puts us firmly in postwar America. Note the long, careful description of an everyday--but still somewhat novel--item for "us moderns." I remember aluminum ice cube trays from their last years in the 60s and early 70s, but by then the mechanism was, I think, somewhat different. Nowadays, you may find an ice cube tray like this at a flea market or antique store, next to the old issues of Life magazine.
+
+Enough nostalgia. We're to find the tension is segment AD, which we'll call \\(F_{AD}\\). Because there are pins at either end and no applied forces between the pins, AD is a two-force member. So is CD. We'll use these facts to draw the free-body diagram for ACB.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/040.png" />
+
+Taking moments about C, we get this equilibrium equation:
+
+\\[ \sum M_C = P \cdot \frac{4 L}{5} - F_{AD} \cdot \frac{h}{5} = 0 \\]
+
+(We know the vertical distance from A to C is \\(h/5\\) from similar triangles.) The solution is
+
+\\[ F_{AD} = 4 \left(\frac{L}{h} \right ) P \\]
+
+which matches the solution in the book. Long description for a short problem.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 41
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/09/2006 10:28:19 PM
+-----
+BODY:
+The free-body diagram of the balance arm is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/041.png" />
+
+The equilibrium equation for moments about the pivot, O, is
+
+\\[ \sum M_O = W_2 b \cos\alpha - W_1 b \cos\alpha + w a \sin\alpha = 0 \\]
+
+Since Den Hartog asks only for a "relation" between \\(\alpha\\) and \\(W_1 - W_2\\), this equation could be our answer. But it's easy enough to rearrange it to
+
+\\[ \tan\alpha = \frac{W_1 - W_2}{w} \cdot \frac{b}{a} \\]
+
+which is the answer given in the book for part a).
+
+The answer to part b) comes from studying the answer to part a). To make \\(\alpha\\) large, \\(\tan\alpha\\) must be large. And to get a large \\(\tan\alpha\\) when \\(W_1 - W_2\\) is small, \\(b/a\\) must be large.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 42
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/10/2006 04:48:26 PM
+-----
+BODY:
+For part a), we draw the free-body diagram of the plate,
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/042a.png" />
+
+and construct the equilibrium equations from it. Because \\(R_A\\) and \\(R_B\\) are horizontal, the vertical equilibrium equation will have just one unknown, *T*, in it:
+
+\\[ \sum F_y = T\cdot \frac{\sqrt{L^2 - (b+d)^2}}{L} - W = 0 \\]
+
+The complicated fraction in the term with *T* is the cosine of the angle between the rope and the wall. Solving for *T*, we get
+
+\\[ T = W \cdot \frac{L}{\sqrt{L^2 - (b+d)^2}} \\]
+
+To get \\(R_A\\), we take moments about the point B, where \\(R_B\\) intersects the right edge of the plate.
+
+\\[ \sum M_B = W \cdot d + \left( W  \cdot \frac{L}{\sqrt{L^2 - (b+d)^2}} \cdot \frac{b + d}{L}\right) \cdot (c+e) - W \cdot a - R_A \cdot 2e = 0 \\]
+
+The *W* in the first term is the vertical component of *T*, and the term inside the big parentheses is the horizontal component of *T*. Solving for \\(R_A\\), we get
+
+\\[ R_A = \frac{W}{2e} \left( \frac{(b+d)(c+e)}{\sqrt{L^2 - (b+d)^2}} - (a-d) \right) \\]
+
+which is, I think, a bit simpler than the answer in the back of the book, but algebraically equivalent.
+
+To get \\(R_B\\), we can look at either horizontal equilibrium or moment equilibrium about point A, the upper wheel. I chose horizontal equilibrium:
+
+\\[ \sum F_x = W \cdot \frac{b+d}{\sqrt{L^2 - (b+d)^2}} - R_A - R_B = 0 \\]
+
+So, plugging in the previous solution for \\(R_A\\) and solving, we get
+
+\\[ R_B = W \cdot \frac{b+d}{\sqrt{L^2 - (b+d)^2}} - \frac{W}{2e} \left( \frac{(b+d)(c+e)}{\sqrt{L^2 - (b+d)^2}} + d - a \right) \\]
+
+or, after simplifying
+
+\\[ R_B = \frac{W}{2e} \left( (a - d) - \frac{(b+d)(c-e)}{\sqrt{L^2 - (b+d)^2}} \right) \\]
+
+which is algebraically equivalent to the answer in the back of the book. (Den Hartog uses *L* for the lower force and *l* for the length of the rope. Because I think a lower case *l* looks too much like the numeral *1*, I've used *L* for the rope length and \\(R_B\\) for the lower force.)
+
+We get the answer to part b) by setting the expression for \\(R_B\\) equal to zero. The \\(W/2e\\) term cancels out and we're left with the expression in the big parentheses:
+
+\\[ \frac{(b+d)(e-c)}{\sqrt{L^2 - (b+d)^2}} + a - d = 0 \\]
+
+This can be rearranged to the answer in the book:
+
+\\[ \frac{(b+d)}{\sqrt{L^2 - (b+d)^2}} = \frac{a - d}{c-e} \\]
+
+The geometric interpretation of this expression is that the two blue triangles in the figure below are similar. The numerators represent the horizontal legs, and the denominators represent the vertical legs. If this is the case, the lines of action of the three forces meet at a point, which is an equilibrium requirement for a body acted upon by exactly three forces.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/042b.png" />
+
+If we had done part b) first, we could have started with the requirement that the three forces meet at a point and derived the equation from that requirement.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 43
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/10/2006 05:31:22 PM
+-----
+BODY:
+As the roller is starting to go up over the plank, the contact force between the roller and the ground goes to zero. The free-body diagram for this condition is shown below.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/043.png" />
+
+To determine *P*, we take moments about A, the contact point between the plank and the roller.
+
+\\[ \sum M_A = P \cdot 8 - 300 \cdot \sqrt{9^2 - 8^2} = 0 \\]
+
+The solution is *P* = 155 lbs, which, except for roundoff, matches the answer in the back of the book.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 44
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/10/2006 06:05:52 PM
+-----
+BODY:
+The free-body diagram of the bridge deck is shown below.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/044.png" />
+
+The equilibrium equation for moments about the bridge pin, which we'll call O, is
+
+\\[ \sum M_O = P \cdot 15 - 10 \cdot 10 = 0 \\]
+
+and the solution is *Q* = 6.67 tons or 13,333 lbs. (Yes, I know that's too many significant digits--I'm carrying along some extra "placeholder" digits in the intermediate results.) The density of water is 62.4 pounds per cubic foot (pcf), so the density of the concrete in the block is \\(2.5 \cdot 62.4 = 156\,\rm{pcf}\\). (FYI, civil/structural engineers usual take normal-weight concrete to be 150 pcf.) To get 13,333 lbs of concrete, we need
+
+\\[ \frac{13,333}{156} = 85.5\,\rm{ft^2} \\]
+
+of concrete. This is the answer to part a).
+
+When the bridge deck is at 30°, the moment arms of the weight and *Q* will be reduced by the same percentage (they'll be cos 30° = 0.866 times the horizontal values). So the relationship between the weight and *Q* will not change and the necessary volume of concrete will remain 85.5 cubic feet.
+
+Notice that the bascule bridge has a four-bar linkage, just like the Dutch bridge in [Problem 33][1]. The lifting force was independent of the bridge deck angle in that problem, too.
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_02/problem_33.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 45
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/11/2006 09:16:50 PM
+-----
+BODY:
+The free-body diagrams of the gears look like this.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/045a.png" />
+
+Newton's Third Law is the reason the two perimeter forces have the same magnitude and opposite direction.
+
+From the upper gear, we calculate the gear-to-gear force by taking moments about the center:
+
+\\[ \sum M_{B_1} = T_1 - F \cdot r_1 = 0 \\]
+
+so \\(F = T_1/r_1\\). Horizontal equilibrium tells us \\(F_{B_1} = F = T_1/R_1\\).
+
+We now get the resisting torque, \\(T_2\\), by considering the lower gear. Taking moments about its center,
+
+\\[ \sum M_{B_2} = \left( \frac{T_1}{r_1} \right) r_2 - T_2 = 0 \\]
+
+and therefore
+
+\\[ T_2 = T_1 \cdot \frac{r_2}{r_1} \\]
+
+Horizontal equilibrium of the lower gear gives us \\(F_{B_2} = F = F_{B_1} = T_1/r_1 = T_2/r_2\\).
+
+The FBD of the frame is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/045b.png" />
+
+and because the two bearing forces are equal in magnitude, opposite in direction, and act along different lines of action, they form a couple of magnitude
+
+\\[ \frac{T_1}{r_1} (r_1 + r_2) = T_1 + T_1\frac{r_2}{r_1} = T_1 + T_2 \\]
+
+Moment equilibrium of the frame tell us this couple is resisted by the reaction at the base, so \\(M_{base} = T_1 + T_2\\).
+
+We could have gotten this last answer by considering the frame and gears as a whole. The gear-to-gear and bearing forces would then be internal to the system and not appear in the equilibrium equations. All that would be left are the two applied torques and the reaction moment at the base.
+
+By the way, the drawing in the book may give you the impression that the two torques, \\(T_1\\) and \\(T_2\\), act in opposite directions. They don't. \\(T_1\\) is counterclockwise because it is trying to turn the upper gear counterclockwise, Under the influence of \\(T_1\\) and the gear-to-gear force it creates, the lower gear is trying to turn clockwise. \\(T_2\\) is counterclockwise because it is resisting the clockwise rotation of the lower gear.
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 46
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/11/2006 11:17:11 PM
+-----
+BODY:
+This problem looks more complicated than it is. To show that the weight can move around on the platform without affecting the force transmitted through the short vertical link, we start with the free-body diagram of the platform.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/046a.png" />
+
+Vertical equilibrium tells us that \\(R_1 + R_2 = W\\). Exactly how much \\(R_1\\) and \\(R_2\\) are depends, of course on how far to the left or right *W* is. But we won't worry about that now.
+
+Let's move on the the FBDs of the triangular levers.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/046b.png" />
+
+Taking moments about the pivots, we learn that \\(F_1 = R_1(a/b)\\) and \\(F_2 = R_2 (a/b)\\). The force transmitted by the short vertical link is the sum \\(F_1 + F_2 = (R_1 + R_2)(a/b) = W (a/b)\\). So it turns out we'll never have to worry about exactly where *W* is; the link force is independent of *W*'s position.
+
+Moving on to *P*, we draw the FBD of the lower lever, \\(L_3\\).
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/046c.png" />
+
+Taking moments about the pivot, we get
+
+\\[ P = W \frac{ac}{bd} \\]
+
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 47
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/14/2006 09:11:23 PM
+-----
+BODY:
+I'm going to change slightly the notation used in this problem. In the book, Den Hartog uses upper case *W* for the weights of the pendulums. Unfortunately, he also used *W* for the load on the scale platform in [Problem 46][1], of which this problem is a continuation. So I'm going to use lower case *w* for the pendulum weights. Oh yes, I'm also going to use upper case *L*s, because lower case *l*s look too much like the numeral *1*.
+
+The free-body diagram of the left pendulum is shown below. That the tension in the outer steel band is \\(P/2\\) should be obvious, so I'm not going to bother with an FBD of the equalizer bar.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/047a.png" />
+
+Taking moments about the contact point between the inner band and the pendulum arc, A, we get this equilibrium equation:
+
+\\[ \sum M_A = \frac{P}{2} \cdot L_2 - w \cdot L_1 = 0 \\]
+
+The solution is
+
+\\[ L_1 = \frac{P}{2w}L_2 \\]
+
+
+The pendulum is rotated so the contact points with the bands are near the upper ends of the arcs, which puts the system near the maximum value of *P*. Since the arcs have a common center, \\(L_2\\) does not change as the pendulum rotates. \\(L_1\\), however, does change with rotation, so to show the position with half the value of *P*, we simply rotate the pendulum to halve the value of \\(L_1\\).
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/047b.png" />
+
+I probably should have extended the arcs further. Oh well.
+
+[1]: http://www.leancrew.com/mechanics/chapter_02/problem_46.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 48
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/15/2006 10:20:54 PM
+-----
+BODY:
+The next five problems are pretty similar, and we'll be using similar techniques to solve them. The solutions will rely on:
+
+1. *Static equivalence*, in which we will replace certain applied loads with other loads that have the same resultant. The support reactions that come from the application of a statically equivalent set of loads are the same as the support reactions that come from the original loads.
+2.  *Superposition*, which is the principle that the effect on a structure of a set of several loads is the same a sum of the effects of the individual loads.
+
+Our first step will be to replace the non-pin loads with a set of pin loads that have the same resultant (that are statically equivalent). The free-body diagram will be this.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/048a.png" />
+
+Each 500 lb load at the center of a bar has been replaced with two 250 lb loads at the pins at the ends of the bars. The downward 250 lbs from the left bar and the upward 250 lbs from the right bar cancel each other at the top pin. This solution to this problem can be found by adding the solutions of this problem
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/048c.png" />
+
+(which is so trivial I've just put the solution in the FBD) and this problem
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/048b.png" />
+
+In this second sub-problem each bar is a two-force member, so the relationships between the horizontal and vertical components is known:
+
+\\[ \frac{\tilde {V}_A}{H_A} = \tan 30^\circ, \frac{\tilde {V}_B}{H_B} = \tan 45^\circ \\]
+
+The FBD of the top pin is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/048d.png" />
+
+Horizontal equilibrium tells us that \\(H_A = H_B = H\\) and vertical equilibrium says
+
+\\[ 1000 = \tilde {V}_A + \tilde {V}_B = H \tan 30^\circ + H \tan 45^\circ \\]
+
+Solving for *H* gives us *H* = 634 lbs, and therefore \\(\tilde {V}_A = 366\,\rm{lbs}\\) and \\(\tilde {V}_B = 634\,\rm{lbs}\\). Adding in the results of the first sub-problem to the results of the second gives us
+
+\\[ H_A = H_B = 634\,\rm{lbs} \\]
+
+\\[ V_A = 366 + 250 = 616\,\rm{lbs} \\]
+
+\\[ V_B =  634 - 250 = 384\,\rm{lbs} \\]
+
+which matches the answer in the back of the book.
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 49
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/15/2006 11:58:32 PM
+-----
+BODY:
+Here again, we start by determining a statically equivalent set of loads that are applied at the pins. The free-body diagram for this set of load is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/049a.png" />
+
+As before, we'll consider this to be the superposition of the structure with loads applied only at the lower pins (which has a trivial solution) and this problem
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/049b.png" />
+
+which has only two-force members. Because the left bar is vertical, it has only a vertical component; because the right bar is at 45°, its horizontal and vertical components are equal: \\(\tilde H_B = \tilde V_B\\).
+
+The FBD of the top pin is this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/049c.png" />
+
+From horizontal equilibrium, we get \\(\tilde H_B = 152.4\,\rm{lbs}\\), which means that \\(\tilde V_B = 152.4\,\rm{lbs}\\). Vertical equilibrium gives us
+
+\\[ \sum F_y = V_A - 235.7 - 152.4 = 0 \\]
+
+or \\(V_A = 388.1\,\rm{lbs}\\).
+
+To these answers, we add in effect of the loads applied directly to the pin supports. The results are
+
+\\[ H_A = 250\,\rm{lbs} \\]
+
+\\[ V_A = 388.1\,\rm{lbs}\\]
+
+\\[ H_B = 152.4 + 451.2 = 603.6\,\rm{lbs} \\]
+
+\\[ V_B = 152.4 - 117.9 = 34.5\,\rm{lbs} \\]
+
+But for roundoff, these match the magnitudes given in the back of the book. The directions are reversed because Den Hartog asked for the forces imposed on the supports by the structure and we've just calculated the forces imposed on the structure by the supports.
+
+While the reaction forces due to the statically equivalent loads are the same as the reactions due to the original loads, the *internal* forces of the structure may be different. So if, as in this problem, we are asked to calculate internal forces, we can start by using statically equivalent forces to get the reactions, but then we have to use the actual forces--including the reactions we just calculated--to determine the internal forces.
+
+In this problem, to determine the force transmitted by the top pin, we have to go back to the original structure and loading and look at one of the bars. Either bar will do, but the left bar is easier to deal with because it's vertical. The FBD looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/049d.png" />
+
+The forces at the bottom came from the solution we just did, and the forces at the top are pretty obvious (that's why I chose the left bar), so I put in the values without going through the equations. The force transmitted by the top pin, then is the vector sum of the components. The magnitude is
+
+\\[ \sqrt{388.1^2 + 250^2} = 462\,\rm{lbs} \\]
+
+which, except for roundoff, matches the book's answer.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 50
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/17/2006 04:15:52 PM
+-----
+BODY:
+The free-body diagram of the structure with the statically equivalent joint loads is given below.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/050a.png" />
+
+Ignoring for the moment the loads that act directly on the supports, we get the following FBD.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/050b.png" />
+
+It's pretty clear from this diagram that X/2 = 400 lbs, so X = 800 lbs, which is the answer in the back of the book. Symmetry also tells us that \\(\tilde H_A = \tilde H_B\\) and \\(\tilde V_A = \tilde V_B\\). To determine the other forces, we first note that with this equivalent load system, all three bars are two-force members (that's why we chose to transform the mid-bar forces to the joints), and therefore \\(\tilde H_A = \tilde V_A = \tilde V_B = \tilde H_B = \tilde Q\\), and the top bar force, \\(\tilde F\\) is horizontal.
+
+We can then draw the FBD of the upper left pin:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/050c.png" />
+
+Vertical equilibrium tells us that \\(\tilde Q = 500\,\rm{lbs}\\). Horizontal equilibrium gives us \\(\tilde F = 900\,\rm{lbs}\\).
+
+Using superposition, we now combine the reaction forces just calculated with the reactions from the loads that act directly on the supports to get
+
+\\[ H_A = 400 - 500 = -100\,\rm{lbs} \\]
+
+\\[ V_A = 250 + 500 = 750\,\rm{lbs} \\]
+
+\\[ H_B = 500\,\rm{lbs} \\]
+
+\\[ V_B  = 250 + 500 = 750\,\rm{lbs} \\]
+
+The negative sign in the answer for \\(H_A\\) means that it acts to the right, rather than to the left as we've drawn it. These match the answers given in the back of the book.
+
+Now that we have the support reactions, we can use the actual applied loads (as opposed to the fictitious statically equivalent loads we've been using) to determine the forces transmitted by the upper pins. For the left pin, we use the FBD of the left bar
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/050d.png" />
+
+The equilibrium problem here is simple enough that I've just put the solution into the FBD. The forces at the upper end of the bar are the forces transmitted to it by the pin, and match the answers given in the back of the book.
+
+Similarly for the right pin, we use the FBD of the right bar.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/050e.png" />
+
+Again, the equilibrium of the bar is such a simple problem that I've included the solution in the FBD. The vertical force transmitted by the pin is 250 lb. In this case, however, it's not so easy to determine the horizontal force transmitted by the pin because there is a 400 lb horizontal load right at that joint. Is it applied to the horizontal bar? to the sloping bar? partly to one and partly to the other? The problem statement doesn't tell us, but we need to know if we're to answer the question, because the 500 lb force at the top of the bar in the FBD is the *net* force acting on the top of the bar. If the 400 lb load is applied to the horizontal bar, the horizontal force transmitted by the pin is the 500 lb force shown in the FBD. But if the 400 lb load is applied to the sloping bar, the force transmitted by the pin must be 900 lb.
+
+
+
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 51
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/17/2006 09:30:29 PM
+-----
+BODY:
+Following our usual procedure, we find statically equivalent joint loads for each of the non-joint loads. The free-body diagram looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/051a.png" />
+
+Ignoring, for the moment, the loads applied directly to the supports, we get this FBD:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/051b.png" />
+
+Now everything is a two-force member, which means
+
+* \\(H_A = H_B = Q\\);
+* the force in the horizontal bar, *F*, is horizontal; and
+* the force in the vertical is vertical and equal to the reaction force, \\(V_B\\).
+
+Starting with the upper right pin, we get an FBD of
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/051c.png" />
+
+Vertical equilibrium tells us \\(V_B = 500\,\rm{lbs}\\); horizontal equilibrium tells us \\(F = 250\,\rm{lbs}\\).
+
+The upper left pin has this FBD:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/051d.png" />
+
+Vertical equilibrium gives us \\(Q = 500\,\rm{lbs}\\); horizontal equilibrium gives us \\(X = -250\,\rm{lbs}\\), which means that *X* is actually pulling to the left, rather than pushing to the right.
+
+Superposition is needed to get the horizontal reaction at the right support; the others have already been calculated.
+
+\\[ H_A = V_A = 500\,\rm{lbs}\\]
+
+\\[ H_B = 250\,\rm{lbs}\\]
+
+\\[ V_B = 500\,\rm{lbs}\\]
+
+Den Hartog combines \\(H_A\\) and \\(V_A\\) to get a single reaction of \\(500 \sqrt{2}\\) at the left support, but I don't see any value in doing so (especially since he didn't combine the horizontal and vertical components in any of the other reactions).
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 52
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 02
+CATEGORY: Chapter 02
+
+DATE: 06/17/2006 10:12:02 PM
+-----
+BODY:
+In the last problem of this set, Den Hartog uses curved members to try to throw us off our game. But if we just follow our usual procedure and remember that the (straight) line of force in a two-force member connects the two points at which the forces are applied, we'll be fine.
+
+After replacing the real loads with statically equivalent loads at the joints, we get this free-body diagram:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/052a.png" />
+
+Den Hartog was nice to give us a 30° angle for the point of application of the 200 lb load. It put that load (horizontally) halfway between A and C. Ignoring, for the moment, the loads applied directly to the supports, we get
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/052b.png" />
+
+I've drawn straight lines connecting the pins as a reminder that the bar forces in this sub-problem must lie along the lines connecting the hinges. Therefore, \\(\tilde H_A = \tilde V_A = \tilde Q\\).
+
+The FBD of the pin at C is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/052c.png" />
+
+Vertical equilibrium gives us \\(\tilde Q = 50\,\rm{lbs}\\). Horizontal equilibrium gives us \\(H_B = 400 + 50 = 450\,\rm{lbs}\\).
+
+Using superposition to add in the reactions due to the loads applied directly to the supports, we get
+
+\\[ H_A = 50\,\rm{lbs} \\]
+
+\\[ V_A = 50 + 100 = 150\,\rm{lbs} \\]
+
+\\[ H_B = 450\,\rm{lbs} \\]
+
+\\[ V_B = 50\,\rm{lbs} \\]
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 53
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/18/2006 01:02:23 PM
+-----
+BODY:
+Because the weight of the door is uniformly distributed, its center of gravity is at its geometric center. The free-body diagram looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/053.png" />
+
+Taking moments about the lower hinge, point B, we get the equilibrium equation
+
+\\[ \sum M_B = 30 \cdot 1.5 - H_A \cdot 4 = 0 \\]
+
+and the solution is \\(H_A = 11.25\,\rm{lb}\\). Horizontal equilibrium tells us that \\(H_B = H_A = 11.25\,\rm{lb}\\). Vertical equilibrium gives \\(V_A + V_B = 30\,\rm{lb}\\), but there isn't enough information to determine how that 30 lbs is split between the upper and lower hinges. Yes, it's tempting to say that each hinge carries 15 lbs, but there's no mechanical or geometric justification for it. The situation is *statically indeterminant*.
+
+The answer in the back of the book has the directions opposite to those we've shown, but that's because the question asks for the forces the door exerts on the hinges and we've calculated the forces the hinges exert on the door. Newton's Third Law accounts for the direction difference. 
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 54
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/18/2006 03:00:00 PM
+-----
+BODY:
+In setting up the problems with surfaces and volumes of revolution, Den Hartog shows a preference for rotating about a vertical axis, what most people think of as the *y*-axis. This works well if the curve is expressed as a function of *y*, e.g., \\(x = g(y)\\). But since people tend to be more comfortable with curves expressed as function *x*, e.g., \\(y = f(x)\\), I find it easier to do the rotating about the *x*-axis. So the problems here will look like the problems in the book if you turn your head sideways.
+
+Here's a curve, \\(y = f(x)\\).
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/054.png" />
+
+A differential chunk of the curve has length *ds*, and the arc length is calculated by adding up (by integration) all the little chunks from one end to the other. Recall from calculus that these differential chunks are so small that they can be considered straight. Pythagoras tell us
+
+\\[ ds = \sqrt{dx^2 + dy^2} = \sqrt{1 + (dy/dx)^2} dx = \sqrt{1 + [f^\prime(y)]^2} dx \\]
+
+and so the arclength is
+
+\\[ L = \int_a^b \sqrt{1 + [f^\prime(y)]^2} dx \\]
+
+The *y* coordinate of the centroid of this arc is found by taking moments of the differential chunks about the *x*-axis, integrating these moments, then dividing the answer by the arc length.
+
+\\[ \bar y = \frac{\int_a^b f(x) \sqrt{1 + [f^\prime(y)]^2} dx}{\int_a^b \sqrt{1 + [f^\prime(y)]^2} dx} \\]
+
+The circumference of the circle swept out by this point as it rotates about the *x*-axis is
+
+\\[ 2 \pi \bar y = 2 \pi \frac{\int_a^b f(x) \sqrt{1 + [f^\prime(y)]^2} dx}{\int_a^b \sqrt{1 + [f^\prime(y)]^2} dx} \\]
+
+and multiplying this by the arclength of the original curve gives
+
+\\[ 2 \pi \int_a^b f(x) \sqrt{1 + [f^\prime(y)]^2} dx \\]
+
+The first theorem of Pappus says that this is equal to the area swept out by the curve as it rotates about the *x*-axis. To check this, we start by figuring out the area swept out by the differential chunk of curve. That will be \\(2 \pi f(x) ds = 2 \pi f(x) \sqrt{1 + [f^\prime(y)]^2} dx\\). Adding up the areas from all the differential chunks by integration gives us
+
+\\[ \int_a^b 2 \pi f(x) \sqrt{1 + [f^\prime(y)]^2} dx \\]
+
+or
+
+\\[ 2 \pi \int_a^b f(x) \sqrt{1 + [f^\prime(y)]^2} dx \\]
+
+which proves the theorem.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 55
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/18/2006 09:49:30 PM
+-----
+BODY:
+As with the last problem, we start with a curve, \\(y = f(x)\\), and rotate it about the *x*-axis. This time, however, we're going to be looking at the area under the curve and the volume it sweeps out as it rotates.
+
+The diagram we'll be working from is this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/055.png" />
+
+The area under the curve is, of course
+
+\\[ \int_a^b f(x) dx \\]
+
+which is the sum, or integral, of all the little differential slices of width *dx*. The *y* coordinate of the centroid of this area is found by taking the moments of all the differential slices, integrating over the domain, and dividing the result by the area under the curve.
+
+\\[ \bar y = \frac{\int_a^b 1/2 [f(x)]^2 dx}{\int_a^b f(x) dx} \\]
+
+The circumference of the circle swept out by the centroid is
+
+\\[ 2 \pi \bar y = \pi \frac{\int_a^b [f(x)]^2 dx}{\int_a^b f(x) dx} \\]
+
+and the product of this circumference and the area under the curve is
+
+\\[ \pi \int_a^b [f(x)]^2 dx \\]
+
+The second theorem of Pappus states that this is equal to the volume swept out by the area as it rotates about the *x*-axis. To check this, we start by working out the volume swept out by each differential slice: \\(\pi [f(x)]^2 dx\\). Integrating all these differential cylinders over the domain of the curve gives
+
+\\[ \int_a^b \pi [f(x)]^2 dx = \pi \int_a^b [f(x)]^2 dx \\]
+
+which proves the theorem.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 56
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/19/2006 06:37:22 PM
+-----
+BODY:
+Because the plate is uniform, the center of gravity is at the centroid of the composite plane shape. The centroid of the square is at \\((a/2, a/2)\\) and its area is \\(a^2\\). The centroid of the triangle is at \\((4a/3, a/3)\\) and its area is \\(a^2/2\\). (Recall that the centroid of a right triangle is one-third of the leg length from the right angle.)
+
+Combining, we get
+
+\\[ \bar x = \frac{a^2 (a/2) + a^2/2 (4a/3)}{a^2 + a^2/2} = \frac{7}{9} a \\]
+
+and
+
+\\[ \bar y = \frac{a^2 (a/2) + a^2/2 (a/3)}{a^2 + a^2/2} = \frac{4}{9} a \\]
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 57
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/19/2006 06:52:38 PM
+-----
+BODY:
+We're going to ignore the rounded-off corners at the ends and the inside corner of the angle and consider the cross-section to be composed of two rectangles:
+
+1. a thin vertical rectangle, 0.75 inches wide and 7.25 inches high; and
+2. a thin horizontal rectangle, 0.75 inches wide and 4 inches long.
+
+We'll put the origin of our coordinate system at the top left corner of the cross-section with the *x* axis running to the right and the *y* axis running down. Combining the two rectangles, we get
+
+\\[ A = A_1 + A_2 = 0.75 \cdot 7.25 + 0.75 \cdot 4 = 8.4375\,\rm{in^2} \\]
+
+\\[ \bar x = \frac{A_1 \cdot 0.375 + A_2 \cdot 2}{A} = \frac{8.0391}{8.4375} = 0.953\,\rm{in} \\]
+
+\\[ \bar y = \frac{A_1 \cdot (0.75 + 7.25/2) + A_2 \cdot 0.375}{A} = \frac{24.914}{8.4375} = 2.95\,\rm{in} \\]
+
+So the center of gravity is 0.953 in to the right of the top left corner, 2.95 in down from the top left corner, and (trivially) 3 ft in from either end.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 58
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/19/2006 09:23:45 PM
+-----
+BODY:
+Let's take the horizontal and vertical lines in the drawing in the book to be the *x* and *y* axes, respectively. The equation of the circular boundary, then, is
+
+\\[ x^2 + y^2 = r^2 \\]
+
+This is the radius of the thin disk shown in the drawing. The area of the upper and lower surfaces of the disk is \\(\pi x^2 = \pi(r^2 - y^2)\\), its thickness is *dy*, and its centroid is *y* from the flat side of the hemisphere. The center of gravity can be calculated through integration:
+
+\\[ \bar y = \frac{\int_0^r \pi(r^2 - y^2) y\,dy}{\frac{2}{3}\pi r^3} = \frac{\frac{1}{4} \pi r^4}{\frac{2}{3}\pi r^3} = \frac{3}{8} r \\]
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 59
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/21/2006 10:20:40 PM
+-----
+BODY:
+This one will be a little different because we have to (mathematically) weight the areas according to their density when we work out the composite properties. We'll start again with our origin at the top left corner, the *x* axis pointing to the right and the *y* axis pointing down. The cross-section will be broken into three regions:
+
+1. A thin horizontal steel rectangle with thickness \\(a/8\\), width \\(9a/8\\), and density 7.8.
+2. A thin vertical rectangle with thickness \\(a/8\\), height \\(a\\), and density 7.8.
+3. A wood square with height and width \\(a\\) and density 0.8.
+
+This is the kind of problem that's easy to set up in a spreadsheet. The layout could look like this:
+
+|n|w|h|d|x|y|Ad|Adx|Ady|
+|-|-|-|-|-|-|-|---|---|
+|1|1.125|0.125|7.8|0.5625|0.0625|1.0969|0.61699 |0.068555|
+|2|0.125|1.000|7.8|0.0625|0.6250|0.9750|0.060937|0.60938|
+|3|1.000|1.000|0.8|0.6250|0.6250|0.8000|0.500000|0.50000|
+| |     |     |   |      |      |2.8719|1.1779  |1.1779 |
+
+
+where *n* is the region number, *w* is the width, *h* the height, *d* the density, *x* and *y* the coordinates of the centroid, *Ad* the weighted area, and *Adx* and *Ady* the moments of the weighted areas about the axes. The line at the bottom represents the sum of the values above, and so the center of gravity is at
+
+\\[ \bar x = \bar y = \frac{1.1779}{2.8719} = 0.41 \\]
+
+Since the dimensions are all given in terms of *a*, the center of gravity is at \\((0.41a, 0.41a)\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 60
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/21/2006 11:06:49 PM
+-----
+BODY:
+I'm sure you can do the integration to find the centroid of the semicircle, but I'm just going to [look it up][1]. It's \\(\frac{4r}{3\pi}\\) down from the flat edge. Combining this with the triangle, we get
+
+\\[ \bar y = \frac{(hr) \cdot \frac{h}{3} - (\frac{1}{2}\pi r^2) \cdot \frac{4r}{3\pi}}{hr + \frac{1}{2}\pi r^2} = \frac{2(h^2 - 2r^2)}{3(2h + \pi r)} \\]
+
+We've taken our origin at the center of the semicircle with the *y* axis pointing up. It should go without saying that \\(\bar x = 0\\).
+
+[1]: http://www.engineering.com/content/ContentDisplay?contentId=41005016
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 61
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/25/2006 09:19:30 PM
+-----
+BODY:
+There's this joke about engineers...
+
+A mathematician, a physicist, and an engineer were all given a red rubber ball and told to find the volume. The mathematician measured the diameter and did the triple integral. The physicist filled a beaker with water, put the ball in the water, and measured its displacement. The engineer looked up the model number in his *Red Rubber Ball Handbook*.
+
+Can we integrate to find the centroid of a cone and a hemisphere? Of course. In fact, that's what we did for the hemisphere in [Problem 58][1]. But working engineers don't do integrals just for the sake of doing integrals. We already know the c.g. of the hemisphere is \\(3/8 r\\) below its base. And if we go to our *Cone Handbook* (or [here][2]), we'll find that the centroid of the cone is \\(1/4 h\\) above its base. So, the c.g. of the composite body is
+
+\\[ \bar z = \frac{(1/3 \pi r^2 h)(1/4 h) + (2/3 \pi r^3)(-3/8 r)}{1/3 \pi r^2 h + 2/3 \pi r^3} = \frac{h^2 - 3 r^2}{4(h+2r)} \\]
+
+where the origin of *z* is on the plane where the cone and hemisphere meet. Note that the c.g. will be right on that plane if \\(h = \sqrt{3} r\\), below it if *h* is smaller, and above it if *h* is larger.
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_58.html
+[2]: http://mathworld.wolfram.com/Cone.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 62
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/25/2006 11:07:51 PM
+-----
+BODY:
+This is another one of those problems where an engineering student of a couple of generations ago would have happily whipped out his compass and T-square and solved it graphically, just as Den Hartog asks. Today's students are slower at drawing but faster at calculating, so we're going to do this one analytically.
+
+The cheeks are composite bodies; each comprises a rectangle with a circular segment at either end. To make our calculations, we'll need to get the height and area of the circular segments. You can either
+
+1. do some integration;
+2. look it up in a handbook; or
+3. look it up at [MathWorld][1].
+
+Here's the layout, using the notation from MathWorld.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/062.png" />
+
+Plugging in the values from our problem, we get
+
+\\[ d = \frac{1}{2}\sqrt{4 R^2 - c^2} = 5.4544\,\rm{in} \\]
+
+\\[ h = R - d = 0.5456\,\rm{in} \\]
+
+\\[ \theta = 2 \sin^{-1}\frac{c}{2R} = 0.8596\,\rm{rad} \\]
+
+\\[ A_{seg} = \frac{1}{2}R^2 (\theta - \sin\theta) = 1.836\,\rm{in^2} \\]
+
+The height of the rectangle, then is \\(9 - 2h = 7.9087\,\rm{in}\\), and its area is \\(39.544\,\rm{in^2}\\). This makes the volume of each cheek 
+
+\\[ V_{cheek} = 2 \cdot (39.544 + 2\cdot 1.836) = 86.432\,\rm{in^3} \\]
+
+The symmetry of the cheek tells us immediately that its centroid is at the center of the rectangle part. We don't need to do any calculations for this.
+
+The volume of the pin is, of course
+
+\\[ V_{pin} = 4 \pi (3/2)^2 = 28.274\,\rm{in^3} \\]
+
+Taking the center of the pin as the origin of our coordinate system, with the *z* axis pointing up, the c.g. of the entire crank is
+
+\\[ \bar z = \frac{2\cdot 86.432\cdot (-1.5) + 28.274\cdot 0}{2\cdot 86.432 + 28.274} = -1.289\,\rm{in} \\]
+
+or, dropping the excessive number of digits we've been carrying, 1.29 inches below the center of the pin. Den Hartog gets 1.28 inches, which is pretty good.
+
+There's no point in our trying to do the error estimation of part b) because we didn't do any graphical construction.
+
+[1]: http://mathworld.wolfram.com/CircularSegment.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 63
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/26/2006 08:55:25 PM
+-----
+BODY:
+In [Problem 61][1], we saw that the c.g. of a cone is one-quarter of the way up from the base to the tip. It turns out that the one-quarter rule works for any pyramid-like object. And you probably learned in geometry class that the volume of a pyramid is one-third the base area times the height, regardless of the shape of the base. We'll use these formulas and the concept of negative space to solve this problem.
+
+We've seen in several problems how to break up a complex body into several simpler bodies and combine their volumes and centers of gravity to get the c.g. of the complex shape. The usual formula is
+
+\\[ \bar x = \frac{\sum_{i=1}^n \rho_i V_i \bar x_i}{\sum_{i=1}^n \rho_i V_i} \\]
+
+where *n* is the number of parts, and the \\(\rho_i\\), \\(V_i\\), and \\(\bar x_i\\) are the densities, volumes, and c.g. coordinates of the parts. The same formula holds, of course, for the *y* and *z* coordinates. In most of the problems we've done, the densities are all the same, so they drop of the formula and can be ignored.
+
+If the body we're looking at has a hole in it or has some part chopped away, we can still use this formula, we just treat the volume of the hole or chopped-away part as a negative quantity.
+
+So for the truncated pyramid in this problem,
+
+\\[ \bar z = \frac{\frac{1}{3}a^2 h \frac{h}{4} - \frac{1}{3}\left(\frac{a}{3}\right)\frac{h}{3} \left(\frac{2h}{3} - \frac{h}{12}\right)}{\frac{1}{3}a^2 h - \frac{1}{3}\left(\frac{a}{3}\right)\frac{h}{3}} = \frac{3}{13}h \\]
+
+which is the answer to part a).
+
+For part b), we'll call the base area *A*, the height of the full pyramid *h*, and the height of the truncated part \\(h_1\\). (No, I would not have used this notation if I hadn't peeked the back of the book to see what symbols Den Hartog used.)  For this generalized problem,
+
+\\[ \bar z = \frac{\frac{1}{3}A h \frac{h}{4} - \frac{1}{3} \frac{h_1^2}{h^2} A h_1 \left( h - h_1 + \frac{h_1}{4} \right)}{\frac{1}{3}A h - \frac{1}{3} \frac{h_1^2}{h^2} A h_1} \\]
+
+which simplifies to 
+
+\\[ \bar z = \frac{h^4 - 4 h h_1^3 + 3 h_1^4}{4 (h^3 - h_1^3)}  \\]
+
+
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_61.html
+[2]: http://www.leancrew.com/mechanics/chapter_03/problem_59.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 64
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/26/2006 10:48:44 PM
+-----
+BODY:
+I'm not sure of the practical applications of this problem, but it is cute. The c.g. of the semicircular arc is \\(2r/\pi\\) from the center of the arc (which you can confirm [here][1]), so the free-body diagram will look like this
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/064.png" />
+
+and the moment equilibrium about the point of contact with the ground gives us
+
+\\[ w_1  \frac{2 r}{\pi} \sin\alpha = w_2 r \cos\alpha \\]
+
+A bit of algebra gives us
+
+\\[ \frac{w_1}{w_2} = \frac{\pi}{2 \tan\alpha} \\]
+
+which is equivalent to the answer given in the back of the book. I prefer giving answers in terms of tangent because they can be entered in a calculator more directly--calculators don't have a cotangent key.
+
+[1]: http://mathworld.wolfram.com/Semicircle.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 65
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/27/2006 10:13:16 PM
+-----
+BODY:
+The surface area of the hemispherical shell is \\(2\pi r^2\\) and its centroid is \\(r/2\\) from its center. Except for one dimension, the free-body diagram for this problem looks just like the one for [Problem 64][1].
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/065.png" />
+
+Moment equilibrium about the point of contact with the ground gives
+
+\\[ w_1 \frac{r}{2} \sin\alpha = w_2 r \cos\alpha  \\]
+
+So
+
+\\[ \frac{w_1}{w_2} = \frac{2}{\tan\alpha} \\]
+
+Where did I come up with the centroid of the hemispherical surface? In this case, I actually did the integration. To make life easier, I did the problem in [spherical coordinates][2], \\( (r, \theta, \phi) \\), which are defined in this drawing that I pulled from the [MathWorld page][2]:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/spherical-coords.gif" />
+
+A differential patch on the surface has the area
+
+\\[ dA = r^2 \sin\phi\, d\phi\,d\theta \\]
+
+and its *z* coordinate is \\(r \cos\phi\\)
+
+The centroid of the upper hemispherical surface, then, is
+
+\\[ \bar z = \frac{\int_0^{2\pi} \int_0^{\pi/2} r^3 \sin\phi\, \cos\phi\, d\phi\, d\theta}{\int_0^{2\pi} \int_0^{\pi/2} r^2 \sin\phi\, d\phi\, d\theta} = \frac{\pi r^3}{2 \pi r^2} = \frac{r}{2} \\]
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_64.html
+[2]: http://mathworld.wolfram.com/SphericalCoordinates.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 66
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/27/2006 10:26:24 PM
+-----
+BODY:
+OK, we learned in [Problem 64][1] that the centroid of a semicircular arc is \\(2 r/ \pi\\) from its center. If we spin that semicircular arc around to make a sphere, the centroid will make a circle with arc length \\(2\pi (2r/\pi) = 4r\\). The arc length of the generating semicircle itself is \\(\pi r\\), so Pappus's first theorem would tell us that the surface area of the generated sphere is
+
+\\[ (\pi r)(4r) = 4 \pi r^2 \\]
+
+which is, in fact, what any handbook (or [nice web site][2]) would tell you.
+
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_64.html
+[2]: http://mathworld.wolfram.com/Sphere.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 67
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/29/2006 11:37:56 PM
+-----
+BODY:
+Here, we're using the second theorem of Pappus in a sort of backwards way: we know the volume of a sphere is \\(\frac{4}{3}\pi r^3\\) and we know the area of a semicircle is \\(\frac{1}{2}\pi r^2\\). If we consider our semicircle to be above the *x* axis as in this figure
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/067.png" />
+
+the circumference traversed by the centroid as it's rotated about the *x* axis is \\(2\pi \bar y\\). So
+
+\\[ \frac{1}{2}\pi r^2 \cdot 2\pi \bar y = \frac{4}{3}\pi r^3 \\]
+
+and \\(\bar y = \frac{r}{3}\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 68
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/30/2006 12:17:30 AM
+-----
+BODY:
+The pressure on the door is perpendicular to the door and equal to the product of the water's unit weight of 62.4 pcf and the water's depth. The free-body diagram for the door is
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/068.png" />
+
+We've broken the trapezoidal distributed pressure into a constant pressure of 312 pcf and a triangular pressure with maximum of 312 pcf at the lower part of the door. The resultant forces are
+
+\\[312 \cdot 7.071 \cdot 10 = 22,062\,\rm{lb}\\]
+
+for the constant pressure, and
+
+\\[ \frac{1}{2} \cdot 312 \cdot 7.071 \cdot 10 = 11,031\,\rm{lb}\\]
+
+for the triangular pressure. These resultants are located one-half and one-third, respectively, of the distance from the lower end of the door. Moment equilibrium about the lip at the bottom of the door gives us
+
+\\[ \sum M_L = 22,062\cdot\frac{7.071}{2} + 11,031\cdot\frac{7.071}{3} - F_H\cdot7.071 = 0 \\]
+
+Solving gives us \\(F_H = 14,708\,\rm{lb}\\). Force equilibrium in the direction perpendicular to the door gives us
+
+\\[ F_L = 22,062 + 11,031 - 14,708 = 18,385\,\rm{lb} \\]
+
+The answers in the back of the book match these figures (after rounding off), but the directions given in the book are wrong. The book says these reaction forces are "directed vertically to the door." Clearly, the correct answer is that they are "directed perpendicularly to the door."
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 69
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 06/30/2006 09:31:27 PM
+-----
+BODY:
+In outline, this problem is the same as [the last one][1]. The free-body diagram of the right-hand trap door looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/069.png" />
+
+where we've used a unit weight of 124.8 pcf to calculate the pressures and resultant forces associated with the trapezoidal pressure distribution. Taking moments about point A, we get this equilibrium equation:
+
+\\[ \sum M_A = F_B \cdot 4 - 11,981 \cdot 2 - 3994 \cdot \frac{2 \cdot 4}{3} = 0 \\]
+
+The solution is \\(F_B = 7987\,\rm{lbs}\\), which, apart from round-off, is the answer given in the back of the book.
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_68.html
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 70
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/01/2006 12:12:34 AM
+-----
+BODY:
+The free-body diagram of the dam and the water pressure acting on its face is given below.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/070.png" />
+
+You may notice that the resultant forces for the weight and lateral water pressure don't have units of force (\\(\gamma\\) is the unit weight of water and has units of force per length cubed). They represent the force per unit length in the direction of the paper (or screen).
+
+Taking moment equilibrium about the lower left corner of the dam gives
+
+\\[ 2.5 \gamma b h \frac{b}{2} = \frac{1}{2} \gamma h^2 \frac{h}{3} \\]
+
+or
+
+\\[ b^2 = \frac{2}{15} h^2 \\]
+
+So \\(b\\) must be at least \\(\sqrt{2/15} h\\) to keep the dam from overturning.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 71
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/01/2006 11:14:35 PM
+-----
+BODY:
+This one's just a bit more complicated than [the last one][1], mainly because of the upward pressure on the bottom of the dam. The free-body diagram looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/071.png" />
+
+and the moment equilibrium equation about the bottom left corner of the dam, which we'll call O, is
+
+\\[ \sum M_O = \frac{1}{2} 2.5 \gamma bh \cdot \frac{2b}{3} - \frac{1}{2} \gamma h^2 \cdot \frac{h}{3} - \frac{1}{2} \gamma bh \cdot \frac{2b}{3} = 0 \\]
+
+The solution is
+
+\\[ b^2 = \frac{h^2}{3} \\]
+
+or \\(b = \sqrt{1/3} h\\). This is the minimum width to keep the dam from overturning.
+
+This dam uses less concrete than the rectangular one in [Problem 70][1] (\\(1/2 \sqrt{1/3} h^2 = \sqrt{1/12} h^2\\) vs. \\(\sqrt{2/15} h^2\\)). The increase in efficiency is due to the rightward (upstream) shift of the center of gravity of the dam. Presumably, we could get even more efficient designs by using parabolic, cubic, or higher-order downstream shapes, but there are practical limits to how thin you can make the top of the dam, and the labor costs of making curved formwork may overcome any material savings you may achieve.
+
+[1]: http://www.leancrew.com/mechanics/chapter_03/problem_070.html
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 72
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/02/2006 12:17:00 AM
+-----
+BODY:
+The pressure on the culvert varies with depth, as shown in the diagram below. 
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/072.png" />
+
+The most convenient way to define the pressure distribution is with polar coordinates:
+
+\\[ p = \gamma (h - r \sin\theta) \\]
+
+The vertical component of this pressure is
+
+\\[ p_v = p \sin\theta = \gamma h \sin\theta - \gamma r \sin^2\theta \\]
+
+The total vertical force on the culvert (per unit length perpendicular to the paper/screen) is twice the integral of this pressure from base to crown:
+
+\\[ 2 \int_0^{\pi/2} p_v r\, d\theta = 2 \left[ \gamma rh\int_0^{\pi/2} \sin\theta\, d\theta - \gamma r^2 \int_0^{\pi/2} \sin^2\theta\, d\theta \right]\\]
+
+Working out the integral, we get
+
+\\[ 2 \gamma\,r (h - \frac{\pi r}{4}) \\]
+
+or
+
+\\[ \gamma\,d (h - \frac{\pi d}{8}) \\]
+
+which is the answer to part a).
+
+Part b) is just plug and chug:
+
+\\[ 2.5 \cdot 62.4 \cdot 6 ( 6 - \frac{6 \pi}{8}) = 3410\,\rm{lb/ft} \\]
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 73
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/02/2006 09:41:58 PM
+-----
+BODY:
+We're going to reuse the solution Den Hartog graciously provided us on page 45:
+
+\\[ \delta_1 = \frac{R}{kL} \left( 6 \frac{c}{L} - 2 \right) \\]
+
+Our plan of attack is to express *R* and *c* in terms of the values given in the problem, then set \\(\delta_1 = 0\\) and solve for *b*.
+
+With \\(w_1 = 20\\), \\(L = 12\\), and \\(P = 1000\\), \\(R = 20 \cdot 12 + 1000 = 1240\,\rm{lb}\\). The position of this resultant from the right end of the beam is
+
+\\[ c = \frac{240 \cdot 6 + 1000 b}{1240} = \frac{36 + 25b}{31} \\]
+
+Plugging these and the given values into the expression for \\(\delta_1\\) and setting it to zero gives
+
+\\[ \delta_1 = \frac{1240}{(100/12) \cdot 12} \left( \frac{6}{12} \frac{36 + 25b}{31} - 2 \right) = 0 \\]
+
+where we've divided by 12 to express *k* in lb/ft/ft. The solution is \\(b = 88/25 = 3.52\,\rm{ft}\\). If *P* gets any closer to the right end of the beam, the left end will lift up off the ground.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 74
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/02/2006 10:18:24 PM
+-----
+BODY:
+Here's a good practical problem that's easy to solve if you don't get lost in the details. The basic free-body diagram of the piston and elevator car is shown below.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/074.png" />
+
+There is, of course, pressure acting on the lateral sides of the piston that are immersed in oil, but those forces are purely horizontal and cancel each other out. Equilibrium of vertical forces gives us
+
+\\[ p_{base} \cdot \pi \cdot 5^2 = 8000 + 100 \cdot 30 = 11,000 \\]
+
+where \\(p_{base}\\) must be expressed in psi.
+
+When the elevator is at the top of its range of motion the pressure at the base of the piston is equal to the pressure delivered by the pump, so
+
+\\[ p_{pump} = p_{base} = \frac{11,000}{25 \pi} = 140\,\rm{psi} \\]
+
+When the elevator is at the bottom of its range of motion, we have to account for the pressure of 30 feet of hydraulic oil. Now,
+
+\\[ p_{base} = p_{pump} + \frac{30 \cdot 0.9 \cdot 62.4}{144} = p_{pump} + 11.70 \\]
+
+where the division by 144 converts the pressure due to the column of oil from psf to psi. Plugging this into our expression for vertical equilibrium gives us
+
+\\[ p_{pump} + 11.70 = \frac{11,000}{25 \pi} = 140\,\rm{psi} \\]
+
+and therefore, \\(p_{pump} = 128\,\rm{psi}\\).
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 75
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/02/2006 10:47:26 PM
+-----
+BODY:
+Let's first decide on whether the ship goes up or down. Salt water is denser than fresh water, so it takes less salt water displacement to provide the buoyant force. Therefore, the ship should ride higher in salt water than in fresh.
+
+The amount of freshwater displaced by the ship is
+
+\\[ \frac{10,000 \cdot 2240}{62.4} \\]
+
+and the amount of saltwater displaced is
+
+\\[ \frac{10,000 \cdot 2240}{1.02 \cdot 62.4} \\]
+
+The displacement difference is
+
+\\[ \frac{10,000 \cdot 2240}{62.4} \left( 1 - \frac{1}{1.02} \right) = 7039\,\rm{ft^3} \\]
+
+With a cross-section of 12,000 square feet, the ship will ride
+
+\\[ \frac{7039}{12,000} = 0.5866\,\rm{ft} \\]
+
+or about 7 inches higher in the salt water.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 76
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/03/2006 11:32:59 PM
+-----
+BODY:
+The easy thing to forget in this problem is that the pressure in mercury is not due entirely to the depth within the mercury--there is an additional amount due to the weight of water pressing down on the top surface of the mercury.
+
+We'll start with this free-body diagram:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/076.png" />
+
+The distance *a* is from the free surface of the water to the interface between the water and the mercury. We use *h* to represent the height of the steel piece, *A* for its horizontal cross-sectional area, and *d* for the depth immersed in mercury. The weight of the steel piece is the product of its density and its volume; the resultant force on the top surface of the steel is the product of the pressure in the water and the cross-sectional area; the resultant force on the bottom surface of the steel is the product of the pressure in the mercury and the cross-sectional area.
+
+Vertical equilibrium gives us
+
+\\[ 7.8 \gamma_w h A + \gamma_w (a - h + d) A = \gamma_w a A + 13.6 \gamma_w d A \\]
+
+the solution of which is \\(d = 0.54 h\\). This is how much the steel is immersed in the mercury. Den Hartog asked how much of the steel is in the water, so the answer to his question is \\(d = 0.46 h\\).
+
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 77
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/04/2006 12:52:46 AM
+-----
+BODY:
+The keys to this problem are:
+
+* Because the weight of the ship is the same the displaced volume of water is the same.
+* The vertical resultant of the upward buoyant force passes through the centroid of the displaced water (this is shown on pp. 50-51 of the book).
+* The angle that the ship tilts is *small*, so we can use small-angle theory to simplify the trigonometry.
+
+What is small-angle theory? At its simplest, it says that if an angle is small enough, its sine and tangent are equal to the angle itself (when the angle is measured in radians), and its cosine is one. These approximations are within 1% of the exact values for angles up to 0.14 radians (8°).
+
+A more complete explanation of small-angle theory is that it keeps terms that are linear in the angle, but ignores any higher-order terms. For trig functions, this is equivalent to what we just said about sines, cosines, and tangents. Recall the [Taylor series expansions][1] of these functions are
+
+\\[ \sin x = x - \frac{x^3}{6} + \frac{x^5}{120} - \ldots \\]
+
+\\[ \cos x = 1 - \frac{x^2}{2} + \frac{x^4}{24} - \ldots \\]
+
+\\[ \tan x = x + \frac{x^3}{3} + \frac{2 x^5}{15} + \ldots \\]
+
+and ignoring the higher order terms gives us \\(\sin x = \tan x = x\\) and \\(\cos x = 1\\).
+
+We'll start this problem by looking at the ship in the tilted position. 
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/077a.png" />
+
+Our strategy is to determine the location of the centroid of the displaced water, and to determine \\(\delta\\) in terms of \\(\alpha\\) by recognizing that moment equilibrium of the ship requires the c.g. to be aligned with the resultant of the upward buoyant force.
+
+We use a tilted coordinate system with its origin at the centroid of the original submerged rectangle. We take the current submerged shape to be the composite of that rectangle, a triangle to the right, and a negative-space triangle to the left. Small-angle theory gives us the dimensions of the triangles, and the new centroid of the displaced water is at
+
+\\[ \bar x = \frac{\frac{\alpha b^2}{8} \left(\frac{2}{3}\frac{\alpha b}{2} \right) - \frac{\alpha b^2}{8} \left( -\frac{2}{3}\frac{\alpha b}{2} \right)}{bd} = \frac{\alpha b^2}{12 d} \\]
+
+\\[ \bar y = \frac{\frac{\alpha b^2}{8} \left(\frac{d}{2} + \frac{1}{3}\frac{\alpha b}{2} \right) - \frac{\alpha b^2}{8} \left(\frac{d}{2} - \frac{1}{3}\frac{\alpha b}{2} \right)}{bd} = \frac{\alpha^2 b^2}{24 d} \\]
+
+Since small-angle theory tells us to ignore higher-order terms, we can take \\(\bar y\\) to be zero.
+
+For equilibrium, the c.g. of the ship must be vertically aligned with this centroid. Looking at the figure below, and applying small-angle theory, we get
+
+\\[ \delta = \frac{\alpha b^2}{12 d} - \frac{d}{2}\alpha = \alpha \left( \frac{b^2}{12 d} - \frac{d}{2} \right) \\]
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/077b.png" />
+
+[1]: http://en.wikipedia.org/wiki/Taylor_series
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 78
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/04/2006 03:38:48 PM
+-----
+BODY:
+This is not my favorite problem in the book, but it does have my favorite answer. The "round number" given in the back of the book is, of course, zero. A floating body displaces its weight of water; that is, it displaces a volume of water equal in weight to itself. In this case, the floating body is ice, so when it melts its new volume is equal to the volume of water it was displacing. So no change in water level.
+
+You may have heard, in discussions of global warming, about the threat of ice melting at the poles and raising sea levels. Doesn't that contradict what we've just learned? No, it doesn't. The ice that may raise sea levels if it melts is ice that is currently perched on land masses--it isn't the floating ice. Most (all?) climatologists are careful to make the distinction, but sometimes their words get "simplified" when repeated by others.
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 79
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/04/2006 04:50:31 PM
+-----
+BODY:
+The pressure on the surface of the cylinder, whether due to mercury or water, is always acting perpendicular to the surface--in other words, radially. Hence, there can be no moment about the pivot and therefore no rotation. This is the answer to part a).
+
+What, you may be asking, about the results on pp. 50-51 of the book, showing that the upward buoyant force acts through the centroid of the submerged body? Isn't that proof of the inventor's claim? Well, if you follow the derivation carefully, you'll see that the differential vertical force, *dV*, is assumed to be acting over the entire submerged surface, not just the left or right half. Since the assumptions are different, we can't use the results.
+
+As for part b), we'll start by creating a coordinate system in which the *y* axis runs along the surface of the liquid and the *x* axis goes down into it. We'll call the average depth of the semicircle *h*.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/079a.png" />
+
+The differential force on a differential chunk of the circle, \\(ds\\), is \\(\gamma x\, ds\\) and is directed at right angles to the surface. The horizontal component of this force is \\(dH = \gamma x\,ds \frac{dx}{ds} = \gamma x\,dx\\). Integrating this around the semicircle gives us
+
+\\[ \int \gamma x\,dx = \gamma \left[\frac{1}{2}x^2\right]_{x_{min}}^{x_{max}} = \frac{\gamma (x_{max}^2 - x_{min}^2)}{2} = \gamma \frac{x_{max} + x_{min}}{2} (x_{max} - x_{min}) = \gamma hd \\]
+
+This is the force per unit length perpendicular to the page, so to get the total force, we multiply by the length, *L*.
+
+Using this general result for the two semicircles, we get a total force to the left of
+
+\\[ \gamma_m hdL - \gamma_w hdL = (\gamma_m - \gamma_w) hdL \\]
+
+This is both the force from the liquids onto the cylinder and the force from the cylinder onto the pivot.
+
+To get the upward force on a semicircle, we integrate the vertical component of the differential force, \\(dV = \gamma x\,ds \frac{dy}{ds} = \gamma x\,dy\\).
+
+\\[ \int \gamma x\,dy = \gamma A = \frac{\gamma \pi r^2}{2} \\]
+
+That the integral of \\(x\,dy\\) over the surface is the area of the semicircle can be seen in the diagram below. The integral over the lower half gives the shaded area on the left, and the integral over the upper half subtracts off (because the integral goes in the opposite direction) the shaded area on the right. The result is the area of the semicircle.
+
+The total upward force, then, is
+
+\\[ \frac{\gamma_m \pi r^2}{2} + \frac{\gamma_w \pi r^2}{2} = \frac{\gamma_m + \gamma_w}{2} \pi r^2 \\]
+
+This is both the force from the liquids onto the cylinder and the force from the cylinder onto the pivot.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: drang
+TITLE: Problem 80
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: markdown_with_smartypants
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Chapter 03
+CATEGORY: Chapter 03
+
+DATE: 07/05/2006 04:48:08 PM
+-----
+BODY:
+As with many real-world problems, this one is not particularly difficult in concept, but it does require care in keeping track of all the forces and dimensions.
+
+We'll start by dividing the float into four parts as shown below. The float is 1 foot in depth.
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/080a.png" />
+
+The free-body diagram, as viewed from the side, looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/080b.png" />
+
+We'll call the slope of the float *m*, so the slope of the pressure distribution on the bottom of the float is \\(\gamma m\\), where \\(\gamma\\) is the unit weight of water. The pressure is zero at point B because we are told that the float is just touching the water at that end.
+
+The weights of the parts are:
+
+\\[ W_1 = W_4 = 10.4 \cdot 3\cdot 1 \cdot 1 = 31.2\,\rm{lb} \\]
+
+\\[ W_2 = W_3 = 10.4 \cdot 10 \cdot 1 \cdot 1 = 104\,\rm{lb} \\]
+
+The resultants of the upward pressure are:
+
+\\[ R_1 = R_{4b} = \frac{1}{2}\gamma m \cdot 1 \cdot 3 = 1.5 \gamma m \\]
+
+\\[ R_2 = R_3 = \frac{1}{2}(10 \gamma m) \cdot 10 \cdot 1 = 50 \gamma m \\]
+
+\\[ R_{4a} = 9 \gamma m \cdot 1 \cdot 3 = 27 \gamma m \\]
+
+The pressure acting on part 4 has a trapezoidal distribution and, for simplicity, has been split into two parts: a uniform pressure of \\(9 \gamma m\\), and a triangular pressure that rises an additional \\(\gamma m\\). The resultants \\(R_{4a}\\) and \\(R_{4b}\\) come from these pressures.
+
+We'll use \\(a_i\\) to denote the distances of the \\(W_i\\) from point A, and \\(b_i\\) to denote the distances of the \\(R_i\\) from point A. These are
+
+\\[ a_1 = 9.5, \quad a_2 = a_3 = 5, \quad a_{4a} = 0.5, \quad a_{4b} = 0.333 \\]
+
+\\[ b_1 = 9.333, \quad b_2 = b_3 = 3.333, \quad b_{4a} = 0.5, \quad b_{4b} = 0.333 \\]
+
+Our strategy is similar to that used by Den Hartog to solve the (simpler) beam problem on pp. 43-45 in the book. We're going to determine the position of the resultant of all the downward forces--which will be in terms of *F*, our unknown force applied at point A--and the position of the upward resultant. Setting these positions equal, as required by moment equilibrium, we get
+
+\\[ \frac{W_1a_1 + W_2a_2 + W_3a_3 + W_4a_4}{W_1 + W_2 + W_3 + W_4 + F} =  \frac{R_1b_1 + R_2b_2 + R_3b_3 + R_{4a}b_{4a} + R_{4b}b_{4b}}{R_1 + R_2 + R_3 + R_{4a} + R_{4b}}\\]
+
+Plugging in the previous values, the solution is \\(F = 216\,\rm{lb}\\) (the \\(\gamma m\\) terms drop out). This is the answer to part a).
+
+For part b), we do much the same thing, but because the left end of the float lifts out of the water, the triangular pressure distribution goes to zero some distance from the right end. Although the wetted length of the float is set up as a variable (\\(x\\), in accordance with Den Hartog's hint), we still have to make an assumption about it: namely, is it more or less than 9 feet? If it's more than 9 feet, we have to account for pressure acting on part 1; if it's less than 9 feet, we don't. Because it's less work, we'll make the latter assumption and check it when we're done.
+
+The FBD looks like this:
+
+<img class="c" src="http://www.leancrew.com/mechanics/images/080c.png" />
+
+The weights of the float parts and their positions remain the same, the pressure resultants and their positions change to
+
+\\[ R_2 = R_3 = \frac{1}{2} \gamma m x^2 \\]
+
+\\[ R_{4a} = \gamma m (x - 1) \\]
+
+\\[ R_{4b} = \frac{1}{2} \gamma m \\]
+
+\\[ b_2 = b_3 = \frac{1}{3}x, \quad b_{4a} = \frac{1}{2}, \quad b_{4b} = \frac{1}{3} \\]
+
+Setting the positions of the downward and upward resultants equal gives us
+
+\\[ \frac{W_1a_1 + W_2a_2 + W_3a_3 + W_4a_4}{W_1 + W_2 + W_3 + W_4 + 300} =  \frac{R_2b_2 + R_3b_3 + R_{4a}b_{4a} + R_{4b}b_{4b}}{R_2 + R_3 + R_{4a} + R_{4b}} \\]
+
+Again, when we plug in the values, the \\(\gamma m\\) terms drop out and we get
+
+\\[ 2.3703 = \frac{x^3/3 + 3/2(x-1) + 1/2}{x^2 + 3(x-1) + 3/2} \\]
+
+By trial and error (which goes much faster now than it did in 1948), we get \\(x = 8.90\,\rm{ft}\\). Since this is less than 9 feet, our lazy assumption was correct and we can move on. Had the assumption been violated, we would have had to go back and redo the problem with some pressure acting on part 1.
+
+We can solve for *m*, the slope of the float, by vertical equilibrium:
+
+\\[ 570.4 = 62.4 m [8.90^2 + 3(8.90-1) + 3/2] \\]
+
+So \\(m = 0.0887\\). The distance point B sticks out of the water, then is \\(0.0887 (10 - 8.90) = 0.0976\,\rm{ft}\\) or 1.17 inches. The answer in the back of the book is \\(1\frac{1}{8}\\) inches, which is close enough.
+
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
