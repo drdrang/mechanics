@@ -8,11 +8,15 @@ This is a set of web pages devoted to solving all of the problems in J.P. Den Ha
 
 2. It's a way of contributing to the Internet community. Like the little programs I post [my blog][6], this will be a way for me to give something back to the online world from which I've taken so much.
 
+## The book ##
+
 I've chosen *Mechanics* because it has a good selection of problems, it's [cheap][1] and [readily][2] [available][3], and it's not, as far as I know, being used in classrooms today. My goal is to show students how these problems are solved, not to do their homework for them. (If you're familiar with the book, you know that the answers to all the problems are given in the back. I don't think that detracts from the value of a solutions manual; there's a big difference between a fully-worked-out solution and one-word or one-number answer.)
 
 ![book][]
 
-It's not my intention to reproduce the problems here--solutions manuals usually don't restate the problems, and besides, I don't want Dover coming after me. Just get a copy of the book. If $10-15 is too much, you can probably find a copy in your school library.
+It's not my intention to reproduce the problems here--solutions manuals usually don't restate the problems, and besides, I don't want Dover coming after me for copyright violations. Just get a copy of the book. If $10-15 is too much, you can probably find a copy in your school library.
+
+## The equations ##
 
 Equations are a big part of most solutions. To handle the mathematics, I'm using a JavaScript program called [jsMath][], a spectacular bit of coding from David Cervone of Union College in Schenectady, New York. You should see a little white rectangle labeled "jsMath" in the bottom right corner of your browser's window. Click on it, and a box will pop up that will allow you to configure jsMath for your computer. I suggest you [download a set of TeX fonts][4] for your computer. [TeX][5] is the preeminent system for typesetting mathematics and the pages will look much better if you use these fonts. You'll know you've done the font installation correctly when equations like \(E = mc^2 \) and
 
@@ -20,11 +24,15 @@ Equations are a big part of most solutions. To handle the mathematics, I'm using
 
 look right, scale right, and print right.
 
-The chapter links in the sidebar to the right will take you to pages with links to the individual problems associated with each chapter. You can also enter a problem's URL directly:
+## Navigating the site ##
+
+At the moment, navigation is pretty rudimentary. The chapter links in the sidebar to the right will take you to pages with links to the individual problems associated with each chapter. You can also enter a problem's URL directly:
 
 `http://www.leancrew.com/mechanics/problem123.html`
 
-The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html').
+The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html'). I'll probably add Next and Previous links to the pages soon.
+
+This is a work in progress, so many of the solutions haven't been written yet. If you try to open an unwritten solution, you'll get a Not Found error in your browser.
 
 
 
