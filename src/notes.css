@@ -174,3 +174,10 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+#note #prev {
+}
+
+#note #next {
+  float: right;
+}

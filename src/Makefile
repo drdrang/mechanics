@@ -5,7 +5,7 @@ htmlfiles := $(patsubst %.md, %.html, $(mdfiles))
 
 all: $(htmlfiles)
 
-%.html: %.md project.info header.tmpl footer.tmpl
+%.html: %.md header.tmpl footer.tmpl
 	python buildPage.py $* > $@
 
 install:

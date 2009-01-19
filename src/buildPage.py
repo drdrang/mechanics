@@ -7,8 +7,36 @@ import time
 import string
 import urllib
 
+# Initialize the dictionary of dynamic information.
+info = {}
+
 # The argument is the basename of the Markdown source file.
 mdFile = sys.argv[1] + '.md'
+
+# Get the top line of the Markdown source. If it's a problem, set up
+# navigation links for the bottom of the page.
+topLine = open(mdFile, 'r').readline().strip(' #\n')
+titleWords = topLine.split()
+if titleWords[0] == 'Problem':
+  num = int(titleWords[1])
+  if num == 1:
+    navString = '''<hr />
+<p><span id="next"><a href="problem%03d.html">Problem %d</a></span>
+<span id="prev">&nbsp;</span></p>
+''' % (num + 1, num + 1)
+  elif num == 334:
+    navString = '''<hr />
+<p><span id="next">&nbsp;</span>
+<span id="prev"><a href="problem%03d.html">Problem %d</a></span></p>
+''' % (num - 1, num - 1)
+  else:
+    navString = '''<hr />
+<p><span id="next"><a href="problem%03d.html">Problem %d</a></span>
+<span id="prev"><a href="problem%03d.html">Problem %d</a></span></p>
+''' % (num + 1, num + 1, num - 1, num - 1)
+else:
+  navString = ''
+
 
 # Open the page files and process the content.
 header = open('header.tmpl', 'r')
@@ -17,16 +45,13 @@ cmd = 'mmmd %s | SmartyPants' % mdFile
 content = os.popen(cmd, 'r')
 
 #  Make the template.
-templateParts = [header.read(), content.read(), footer.read()]
+templateParts = [header.read(), content.read(), navString, footer.read()]
 template = string.Template(''.join(templateParts))
 
 # Close the page files.
 header.close()
 footer.close()
 content.close()
-
-# Initialize the dictionary of dynamic information.
-info = {}
 
 # Dictionary entry with long modification date of the Markdown file.
 mdModTime = time.localtime(os.path.getmtime(mdFile))
@@ -41,39 +66,6 @@ info['modsdate'] = info['modsdate'].replace(' ', '')
 info['modtime'] = time.strftime('%l:%M %p', mdModTime)
 if info['modtime'][0] == ' ':
   info['modtime'] = info['modtime'][1:]
-
-# Dictionary entry with absolute path to the Markdown file (for editing).
-info['mdpath'] = os.path.abspath(mdFile)
-
-# Add project info to the dictionary.
-projInfo = open('project.info', 'r')
-for line in projInfo:
-  if line[0] == '#' or line.strip() == '':
-    continue
-  name, value = [s.strip() for s in line.split('=', 1)]
-  if name in info:
-    info[name] += '\n' + value
-  else:
-    info[name] = value
-
-projInfo.close()
-
-# Dictionary entry with absolute path to project info file (for editing).
-info['infopath'] = os.path.abspath('project.info')
-
-# Convert the contacts into a series of HTML list items.
-if 'contact' in info:
-  contactLI = []
-  cl = [s.split(':',1) for s in info['contact'].split('\n')]
-  for c in cl:
-    if len(c) == 1:
-      contactLI.append('<li>%s</li>' % c[0])
-    else:
-      contactLI.append('<li><a href="addressbook://%s">%s</a></li>'\
-      % tuple(reversed(c)))
-  info['contactlist'] = '\n'.join(contactLI)
-else:
-  info['contactlist'] = ''
 
 # Output the template with the dynamic information substituted in.
 print template.safe_substitute(info)

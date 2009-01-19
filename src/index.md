@@ -26,11 +26,13 @@ look right, scale right, and print right.
 
 ## Navigating the site ##
 
-At the moment, navigation is pretty rudimentary. The chapter links in the sidebar to the right will take you to pages with links to the individual problems associated with each chapter. You can also enter a problem's URL directly:
+At the moment, navigation is pretty rudimentary. The chapter links in the sidebar to the right will take you to pages with links to the individual problems associated with each chapter. At the bottom of each problem page are links to the previous and subsequent problems.
+
+If you want to jump right to a specific problem, you can also enter its URL directly:
 
 `http://www.leancrew.com/mechanics/problem123.html`
 
-The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html'). I'll probably add Next and Previous links to the pages soon.
+The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html').
 
 This is a work in progress, so many of the solutions haven't been written yet. If you try to open an unwritten solution, you'll get a Not Found error in your browser.
 
