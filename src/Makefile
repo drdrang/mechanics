@@ -4,10 +4,10 @@ mdfiles := $(wildcard *.md)
 htmlfiles := $(patsubst %.md, %.html, $(mdfiles))
 
 all: $(htmlfiles)
+	python buildRSS.py > index.xml
 
 %.html: %.md header.tmpl footer.tmpl
 	python buildPage.py $* > $@
-	python buildRSS.py > index.xml
 
 install:
 	rsync -av *.html  ../build/
