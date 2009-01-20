@@ -7,6 +7,7 @@ all: $(htmlfiles)
 
 %.html: %.md header.tmpl footer.tmpl
 	python buildPage.py $* > $@
+	python buildRSS.py > index.xml
 
 install:
 	rsync -av *.html  ../build/
