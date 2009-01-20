@@ -12,6 +12,7 @@ all: $(htmlfiles)
 install:
 	rsync -av *.html  ../build/
 	rsync -av *.css   ../build/
+	rsync -av *.xml	  ../build/
 	rsync -av  images ../build/
 
 clean:
