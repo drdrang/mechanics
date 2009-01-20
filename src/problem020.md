@@ -6,7 +6,7 @@ First, we have to deal with the force coming from the pressure pushing up on the
 
 \[ F_p = p \left (\frac{\pi d^2}{4} \right ) \]
 
-When he described the weight of the arm itself, Den Hartog says that it's "concentrated at a distan.ce \(c\) from the valve." This, of course, is nonsense. The weight of the arm is spread out over the length of the arm; it isn't concentrated at a single point. But, as we'll see later, the *effect* of its distributed weight is equivalent to a concentrated force acting at its center of mass.
+When he described the weight of the arm itself, Den Hartog says that it's "concentrated at a distance \(c\) from the valve." This, of course, is nonsense. The weight of the arm is spread out over the length of the arm; it isn't concentrated at a single point. But, as we'll see later, the *effect* of its distributed weight is equivalent to a concentrated force acting at its center of mass.
 
 OK, enough theory. We know the weight of the bar, \(w\); we know the pressure force, \(F_p\); we don't know the required weight at the right end of the arm, \(W\), or the reaction force at the pivot at the left end of the arm. Since we're asked in part a) to determine \(W\), it makes since to try to find an equilibrium equation that includes \(W\) but doesn't include the pivot force. The equilibrium equation for moments about the pivot--which we'll call O--will do the trick:
 
