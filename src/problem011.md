@@ -1,6 +1,14 @@
 # Problem 11 #
 
-Most of the work of this problem is figuring out the geometry of the boom and rope. With the 10 ft boom at a 45° angle, its horizontal and vertical projections are both \( 10\cdot\sin 45^\circ = 10/\sqrt{2} = 7.07\:\rm{ft} \). This is equal to the vertical projection of the rope; the horizontal projection of the rope is therefore \( 10/\sqrt{2}\cdot\cot 30^\circ = 10\sqrt{3}/\sqrt{2} = 12.25\:\rm{ft} \). The difference of the horizontal projections is 5.18 ft, which is the distance between Point A and the lower anchor point of the rope.
+Most of the work of this problem is figuring out the geometry of the boom and rope. With the 10 ft boom at a 45° angle, its horizontal and vertical projections are both
+
+\[ 10\cdot\sin 45^\circ = 10/\sqrt{2} = 7.07\:\rm{ft} \]
+
+This is equal to the vertical projection of the rope; the horizontal projection of the rope is therefore
+
+\[ 10/\sqrt{2}\cdot\cot 30^\circ = 10\sqrt{3}/\sqrt{2} = 12.25\:\rm{ft} \]
+
+The difference of the horizontal projections is 5.18 ft, which is the distance between Point A and the lower anchor point of the rope.
 
 <img src="images/011.png" alt="" />
 
