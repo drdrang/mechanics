@@ -36,6 +36,21 @@ The problem numbers are always given in three-digit form, with leading zeros if 
 
 This is a work in progress, so many of the solutions haven't been written yet. If you try to open an unwritten solution, you'll get a Not Found error in your browser.
 
+## RSS feed ##
+
+You can follow the progress of the site by subscribing to its RSS feed. Your browser's address bar should have an RSS button that will allow you to subscribe. If that doesn't work, the feed's address is 
+
+    http://www.leancrew.com/mechanics/index.xml
+
+which you can manually paste into your feed reader.
+
+New feed items will be generated when:
+
+1. I add a new solution.
+2. I edit an old solution.
+
+At present, the feed does not provide full entries for new or edited pages, just the problem number and a brief description. Changes elsewhere in the site, like to this page, will not generate new feed items.
+
 
 
 [1]: http://www.buy.com/retail/product.asp?sku=30085228&loc=106&sp=1
