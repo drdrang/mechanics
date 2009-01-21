@@ -4,11 +4,15 @@ import sys
 import os
 import os.path
 import time
+import glob
 import string
-import urllib
+# import urllib
 
 # Initialize the dictionary of dynamic information.
 info = {}
+
+# Get the list of problem files.
+probFiles = glob.glob('problem*.md')
 
 # The argument is the basename of the Markdown source file.
 mdFile = sys.argv[1] + '.md'
@@ -19,21 +23,25 @@ topLine = open(mdFile, 'r').readline().strip(' #\n')
 titleWords = topLine.split()
 if titleWords[0] == 'Problem':
   num = int(titleWords[1])
-  if num == 1:
-    navString = '''<hr />
-<p><span id="next"><a href="problem%03d.html">Problem %d</a></span>
-<span id="prev">&nbsp;</span></p>
-''' % (num + 1, num + 1)
-  elif num == 334:
-    navString = '''<hr />
-<p><span id="next">&nbsp;</span>
-<span id="prev"><a href="problem%03d.html">Problem %d</a></span></p>
-''' % (num - 1, num - 1)
+  navItems = ['<hr />\n', '<p>']
+  
+  # Include a link to the next problem if it exists.
+  if 'problem%03d.md' % (num + 1) in probFiles:
+    navItems.append('<span id="next"><a href="problem%03d.html">Problem %d</a></span>' % (num + 1, num + 1))
   else:
-    navString = '''<hr />
-<p><span id="next"><a href="problem%03d.html">Problem %d</a></span>
-<span id="prev"><a href="problem%03d.html">Problem %d</a></span></p>
-''' % (num + 1, num + 1, num - 1, num - 1)
+    navItems.append('<span id="next">&nbsp;</span>')
+    
+  # Include a link to the prev problem if it exists.
+  if 'problem%03d.md' % (num - 1) in probFiles:
+    navItems.append('<span id="prev"><a href="problem%03d.html">Problem %d</a></span>' % (num - 1, num - 1))
+  else:
+    navItems.append('<span id="prev">&nbsp;</span>')
+  
+  # Put it all together
+  navItems.append('</p>')
+  navString = ''.join(navItems)
+
+# No navigation if it's not a problem page.
 else:
   navString = ''
 

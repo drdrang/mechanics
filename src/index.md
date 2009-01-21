@@ -34,7 +34,7 @@ If you want to jump right to a specific problem, you can also enter its URL dire
 
 The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html').
 
-This is a work in progress, so many of the solutions haven't been written yet. The sidebar will always show how many of the book's 334 problems have been solved.
+This is a work in progress, so many of the solutions haven't been written yet, and you may get a Not Found error from your browser if you manually enter a URL for a problem that hasn't been solved yet. The sidebar will always show how many of the book's 334 problems have been solved.
  
 
 ## RSS feed ##
