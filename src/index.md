@@ -34,7 +34,7 @@ If you want to jump right to a specific problem, you can also enter its URL dire
 
 The problem numbers are always given in three-digit form, with leading zeros if necessary (e.g., the first problem is 'problem001.html').
 
-This is a work in progress, so many of the solutions haven't been written yet. If you try to open an unwritten solution, you'll get a Not Found error in your browser.
+This is a work in progress, so many of the solutions haven't been written yet. Even though the chapter pages have links to all 334 of the book's problems, the links to the unsolved problems are dead, and if you try to open an unwritten solution, you're browser will return a Not Found error. The sidebar will always show how many of the book's 334 problems have been solved.
 
 ## RSS feed ##
 
